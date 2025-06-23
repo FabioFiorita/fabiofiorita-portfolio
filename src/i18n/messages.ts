@@ -8,12 +8,27 @@ interface Translations {
 		general: string;
 		about: string;
 		contact: string;
+		portfolio: string;
 	};
 	Apps: {
-		itsMedTime: { title: string };
-		tastik: { title: string };
-		appStore: string;
+		itsMedTime: {
+			title: string;
+			category: string;
+			shortDescription: string;
+		};
+		tastik: {
+			title: string;
+			category: string;
+			shortDescription: string;
+		};
 		privacyPolicy: string;
+	};
+	Portfolio: {
+		welcome: string;
+		subtitle: string;
+		learnMore: string;
+		getInTouch: string;
+		viewDetails: string;
 	};
 }
 
@@ -24,12 +39,30 @@ export const translations: Record<Locale, Translations> = {
 			general: "General",
 			about: "About",
 			contact: "Contact",
+			portfolio: "Portfolio",
 		},
 		Apps: {
-			itsMedTime: { title: "ItsMedTime" },
-			tastik: { title: "Tastik" },
-			appStore: "App Store",
+			itsMedTime: {
+				title: "ItsMedTime",
+				category: "Health",
+				shortDescription:
+					"A user-friendly app that helps you track medications, manage schedules, and improve adherence for better health outcomes.",
+			},
+			tastik: {
+				title: "Tastik",
+				category: "Productivity",
+				shortDescription:
+					"An app for creating customizable lists with easy organization to help boost productivity and simplify planning your day.",
+			},
 			privacyPolicy: "Privacy Policy",
+		},
+		Portfolio: {
+			welcome: "Welcome to My App Portfolio",
+			subtitle:
+				"Hello, I'm Fábio Fiorita, Computer Engineer and Mobile Application Developer",
+			learnMore: "About Me",
+			getInTouch: "Get In Touch",
+			viewDetails: "View Details",
 		},
 	},
 	pt: {
@@ -38,12 +71,30 @@ export const translations: Record<Locale, Translations> = {
 			general: "Geral",
 			about: "Sobre",
 			contact: "Contato",
+			portfolio: "Portifólio",
 		},
 		Apps: {
-			itsMedTime: { title: "ItsMedTime" },
-			tastik: { title: "Tastik" },
-			appStore: "App Store",
+			itsMedTime: {
+				title: "MeuMedicamento",
+				category: "Saúde",
+				shortDescription:
+					"Um app fácil de usar que ajuda você a controlar medicamentos, gerenciar horários e melhorar a adesão para melhores resultados de saúde.",
+			},
+			tastik: {
+				title: "Tastik",
+				category: "Produtividade",
+				shortDescription:
+					"Um aplicativo para criar listas personalizáveis, com organização fácil, para ajudar a aumentar a produtividade e simplificar o planejamento do dia.",
+			},
 			privacyPolicy: "Política de Privacidade",
+		},
+		Portfolio: {
+			welcome: "Bem-vindo ao Meu Portfólio de Apps",
+			subtitle:
+				"Olá, sou Fábio Fiorita, Engenheiro de Computação e Desenvolvedor de Aplicativos Móveis",
+			learnMore: "Sobre Mim",
+			getInTouch: "Entre em Contato",
+			viewDetails: "Ver Detalhes",
 		},
 	},
 };

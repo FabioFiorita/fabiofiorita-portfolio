@@ -1,8 +1,9 @@
-import { Home, Mail, Shield, Smartphone, Store, User } from "lucide-react";
+import { Home, ListCheck, Mail, Pill, Shield, Store, User } from "lucide-react";
 import { useTranslations } from "next-intl";
 import {
 	Sidebar,
 	SidebarContent,
+	SidebarFooter,
 	SidebarGroup,
 	SidebarGroupContent,
 	SidebarGroupLabel,
@@ -15,6 +16,7 @@ import {
 	SidebarMenuSubItem,
 	SidebarRail,
 } from "@/components/ui/sidebar";
+import { LanguageSwitcher } from "./language-switcher";
 
 export function AppSidebar() {
 	const t = useTranslations();
@@ -45,14 +47,14 @@ export function AppSidebar() {
 			{
 				title: t("Apps.itsMedTime.title"),
 				url: "/itsmedtime",
-				icon: Smartphone,
+				icon: Pill,
 				items: [
 					{
 						title: t("Apps.itsMedTime.title"),
 						url: "/itsmedtime",
 					},
 					{
-						title: t("Apps.appStore"),
+						title: "App Store",
 						url: "/itsmedtime/app-store",
 						icon: Store,
 					},
@@ -66,14 +68,14 @@ export function AppSidebar() {
 			{
 				title: t("Apps.tastik.title"),
 				url: "/tastik",
-				icon: Smartphone,
+				icon: ListCheck,
 				items: [
 					{
 						title: t("Apps.tastik.title"),
 						url: "/tastik",
 					},
 					{
-						title: t("Apps.appStore"),
+						title: "App Store",
 						url: "/tastik/app-store",
 						icon: Store,
 					},
@@ -164,6 +166,13 @@ export function AppSidebar() {
 					</SidebarGroup>
 				))}
 			</SidebarContent>
+			<SidebarFooter>
+				<SidebarMenu>
+					<SidebarMenuItem>
+						<LanguageSwitcher />
+					</SidebarMenuItem>
+				</SidebarMenu>
+			</SidebarFooter>
 			<SidebarRail />
 		</Sidebar>
 	);

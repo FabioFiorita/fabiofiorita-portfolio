@@ -1,8 +1,12 @@
+import { FeaturedApps } from "@/components/featured-apps";
+import { HeroSection } from "@/components/hero-section";
+
 export default function HomePage() {
 	return (
 		<main className="p-8">
-			<div className="flex justify-between items-center mb-8">
-				<h1 className="text-2xl font-bold">Hello World</h1>
+			<div className="flex flex-col justify-center items-center mb-8 gap-8 w-full">
+				<HeroSection />
+				<FeaturedApps />
 			</div>
 		</main>
 	);

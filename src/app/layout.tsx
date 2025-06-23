@@ -4,8 +4,10 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
 import { cookies } from "next/headers";
+import { Suspense } from "react";
 import { AppSidebar } from "@/components/app-sidebar";
-import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { Header } from "@/components/header";
+import { SidebarProvider } from "@/components/ui/sidebar";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
@@ -39,8 +41,8 @@ export default async function RootLayout({
 				<NextIntlClientProvider>
 					<SidebarProvider defaultOpen={defaultOpen}>
 						<AppSidebar />
-						<main>
-							<SidebarTrigger />
+						<main className="w-full">
+							<Header />
 							{children}
 						</main>
 					</SidebarProvider>

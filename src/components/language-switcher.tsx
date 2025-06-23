@@ -1,5 +1,6 @@
 "use client";
 
+import { Languages } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
 import {
@@ -34,8 +35,9 @@ export function LanguageSwitcher() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="sm">
-					{currentLanguage?.flag} {currentLanguage?.label}
+				<Button variant="outline" size="sm" className="w-full">
+					<Languages className="size-4" />
+					{currentLanguage?.label}
 				</Button>
 			</DropdownMenuTrigger>
 			<DropdownMenuContent align="end">
