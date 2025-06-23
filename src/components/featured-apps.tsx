@@ -6,19 +6,17 @@ export function FeaturedApps() {
 
 	const appsData = [
 		{
-			title: t("Apps.itsMedTime.title"),
-			category: t("Apps.itsMedTime.category"),
-			description: t("Apps.itsMedTime.shortDescription"),
+			key: "itsMedTime",
 			detailsUrl: "/itsmedtime",
 			appStoreUrl: "https://apps.apple.com/gb/app/itsmedtime/id1580757092",
+			image: "/itsmedtime.svg",
 		},
 		{
-			title: t("Apps.tastik.title"),
-			category: t("Apps.tastik.category"),
-			description: t("Apps.tastik.shortDescription"),
+			key: "tastik",
 			detailsUrl: "/tastik",
 			appStoreUrl:
 				"https://apps.apple.com/gb/app/tastik-tasks-and-lists/id6459197048",
+			image: "/tastik.svg",
 		},
 	];
 
@@ -26,12 +24,13 @@ export function FeaturedApps() {
 		<div className="grid gap-6 md:grid-cols-2 w-full">
 			{appsData.map((app) => (
 				<AppCard
-					key={app.title}
-					title={app.title}
-					category={app.category}
-					description={app.description}
+					key={app.key}
+					title={t(`Apps.${app.key}.title`)}
+					category={t(`Apps.${app.key}.category`)}
+					description={t(`Apps.${app.key}.shortDescription`)}
 					detailsUrl={app.detailsUrl}
 					appStoreUrl={app.appStoreUrl}
+					image={app.image}
 				/>
 			))}
 		</div>

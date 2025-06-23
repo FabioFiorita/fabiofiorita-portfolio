@@ -45,42 +45,42 @@ export function AppSidebar() {
 		],
 		apps: [
 			{
-				title: t("Apps.itsMedTime.title"),
+				key: "itsMedTime",
 				url: "/itsmedtime",
 				icon: Pill,
 				items: [
 					{
-						title: t("Apps.itsMedTime.title"),
+						title: "itsMedTime",
 						url: "/itsmedtime",
 					},
 					{
 						title: "App Store",
-						url: "/itsmedtime/app-store",
+						url: "https://apps.apple.com/gb/app/itsmedtime/id1580757092",
 						icon: Store,
 					},
 					{
-						title: t("Apps.privacyPolicy"),
+						title: "privacyPolicy",
 						url: "/itsmedtime/privacy",
 						icon: Shield,
 					},
 				],
 			},
 			{
-				title: t("Apps.tastik.title"),
+				key: "tastik",
 				url: "/tastik",
 				icon: ListCheck,
 				items: [
 					{
-						title: t("Apps.tastik.title"),
+						title: "tastik",
 						url: "/tastik",
 					},
 					{
 						title: "App Store",
-						url: "/tastik/app-store",
+						url: "https://apps.apple.com/gb/app/tastik-tasks-and-lists/id6459197048",
 						icon: Store,
 					},
 					{
-						title: t("Apps.privacyPolicy"),
+						title: "privacyPolicy",
 						url: "/tastik/privacy",
 						icon: Shield,
 					},
@@ -114,7 +114,6 @@ export function AppSidebar() {
 			</SidebarHeader>
 
 			<SidebarContent>
-				{/* General Navigation */}
 				{portfolioData.navigation.map((section) => (
 					<SidebarGroup key={section.title}>
 						<SidebarGroupLabel>{section.title}</SidebarGroupLabel>
@@ -135,17 +134,16 @@ export function AppSidebar() {
 					</SidebarGroup>
 				))}
 
-				{/* Apps */}
 				{portfolioData.apps.map((app) => (
-					<SidebarGroup key={app.title}>
-						<SidebarGroupLabel>{app.title}</SidebarGroupLabel>
+					<SidebarGroup key={app.key}>
+						<SidebarGroupLabel>{t(`Apps.${app.key}.title`)}</SidebarGroupLabel>
 						<SidebarGroupContent>
 							<SidebarMenu>
 								<SidebarMenuItem>
 									<SidebarMenuButton asChild>
 										<a href={app.url}>
 											<app.icon />
-											<span>{app.title}</span>
+											<span>{t(`Apps.${app.key}.title`)}</span>
 										</a>
 									</SidebarMenuButton>
 									<SidebarMenuSub>
@@ -154,7 +152,13 @@ export function AppSidebar() {
 												<SidebarMenuSubButton asChild>
 													<a href={subItem.url}>
 														{subItem.icon && <subItem.icon />}
-														<span>{subItem.title}</span>
+														<span>
+															{subItem.title === "privacyPolicy"
+																? t("Apps.privacyPolicy")
+																: subItem.title === app.key
+																	? t(`Apps.${app.key}.title`)
+																	: subItem.title}
+														</span>
 													</a>
 												</SidebarMenuSubButton>
 											</SidebarMenuSubItem>

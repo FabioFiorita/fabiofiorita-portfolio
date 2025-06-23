@@ -30,6 +30,16 @@ interface Translations {
 		getInTouch: string;
 		viewDetails: string;
 	};
+	DevelopmentApproach: {
+		title: string;
+		subtitle: string;
+		approaches: {
+			iosFirst: { title: string; description: string };
+			privacy: { title: string; description: string };
+			modern: { title: string; description: string };
+			userCentered: { title: string; description: string };
+		};
+	};
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -64,6 +74,32 @@ export const translations: Record<Locale, Translations> = {
 			getInTouch: "Get In Touch",
 			viewDetails: "View Details",
 		},
+		DevelopmentApproach: {
+			title: "My Development Philosophy",
+			subtitle: "How I craft iOS applications",
+			approaches: {
+				iosFirst: {
+					title: "iOS-First Development",
+					description:
+						"Building native iOS apps with Swift and SwiftUI, following Apple's Human Interface Guidelines and best practices.",
+				},
+				privacy: {
+					title: "Privacy by Design",
+					description:
+						"Implementing privacy-first architecture with secure data handling, local storage, and transparent data practices.",
+				},
+				modern: {
+					title: "Modern iOS Features",
+					description:
+						"Leveraging iOS capabilities including interactive widgets, SwiftData, and iCloud synchronization.",
+				},
+				userCentered: {
+					title: "User-Centered Experience",
+					description:
+						"Creating intuitive interfaces that feel natural to iOS users while solving real-world problems effectively.",
+				},
+			},
+		},
 	},
 	pt: {
 		Owner: { title: "Desenvolvedor de Apps" },
@@ -95,6 +131,32 @@ export const translations: Record<Locale, Translations> = {
 			learnMore: "Sobre Mim",
 			getInTouch: "Entre em Contato",
 			viewDetails: "Ver Detalhes",
+		},
+		DevelopmentApproach: {
+			title: "Minha Filosofia de Desenvolvimento",
+			subtitle: "Como crio aplicativos iOS",
+			approaches: {
+				iosFirst: {
+					title: "Desenvolvimento iOS-First",
+					description:
+						"Construindo apps nativos para iOS com Swift e SwiftUI, seguindo as diretrizes e melhores práticas da Apple.",
+				},
+				privacy: {
+					title: "Privacidade por Design",
+					description:
+						"Implementando arquitetura com privacidade em primeiro lugar, dados seguros, armazenamento local e práticas transparentes.",
+				},
+				modern: {
+					title: "Recursos Modernos do iOS",
+					description:
+						"Aproveitando recursos do iOS, incluindo widgets interativos, SwiftData e sincronização iCloud.",
+				},
+				userCentered: {
+					title: "Experiência Centrada no Usuário",
+					description:
+						"Criando interfaces intuitivas que parecem naturais para usuários iOS enquanto resolvem problemas reais de forma eficaz.",
+				},
+			},
 		},
 	},
 };
