@@ -9,6 +9,9 @@ interface Translations {
 		about: string;
 		contact: string;
 		portfolio: string;
+		itsmedtime: string;
+		tastik: string;
+		privacy: string;
 	};
 	About: {
 		skills: string;
@@ -37,6 +40,30 @@ interface Translations {
 			shortDescription: string;
 		};
 		privacyPolicy: string;
+		privacy: {
+			lastUpdated: string;
+			sections: {
+				personalData: {
+					title: string;
+					body: string;
+				};
+				inAppPurchases: {
+					title: string;
+					body: string;
+					button: string;
+				};
+				analytics: {
+					title: string;
+					body: string;
+					button: string;
+				};
+				contact: {
+					title: string;
+					body: string;
+					button: string;
+				};
+			};
+		};
 	};
 	Portfolio: {
 		welcome: string;
@@ -70,6 +97,9 @@ export const translations: Record<Locale, Translations> = {
 			about: "About",
 			contact: "Contact",
 			portfolio: "Portfolio",
+			itsmedtime: "ItsMedTime",
+			tastik: "Tastik",
+			privacy: "Privacy Policy",
 		},
 		About: {
 			skills: "Skills",
@@ -105,6 +135,30 @@ export const translations: Record<Locale, Translations> = {
 					"An app for creating customizable lists with easy organization to help boost productivity and simplify planning your day.",
 			},
 			privacyPolicy: "Privacy Policy",
+			privacy: {
+				lastUpdated: "Last Updated: May 4, 2025",
+				sections: {
+					personalData: {
+						title: "Personal Data",
+						body: "We do not collect any personal data. Your personal data is stored locally on your device or in iCloud.",
+					},
+					inAppPurchases: {
+						title: "In-App Purchases",
+						body: "We use the third-party RevenueCat service to manage in-app purchases, which may collect data about your device and app usage. For more information on what data is collected and how it is used, please refer to the RevenueCat privacy policy.",
+						button: "RevenueCat Privacy Policy",
+					},
+					analytics: {
+						title: "Analytics",
+						body: "{appName} uses PostHog for analytics to help us understand how users interact with the app and improve the user experience. PostHog collects anonymous usage data such as app opens, feature usage, and crash reports. This data helps us identify areas for improvement and prioritize new features.",
+						button: "PostHog Privacy Policy",
+					},
+					contact: {
+						title: "Contact",
+						body: "If you have any questions or suggestions about our privacy policy, please contact us at fabiolfp@gmail.com.",
+						button: "Contact Us",
+					},
+				},
+			},
 		},
 		Portfolio: {
 			welcome: "Welcome to My App Portfolio",
@@ -154,6 +208,9 @@ export const translations: Record<Locale, Translations> = {
 			about: "Sobre",
 			contact: "Contato",
 			portfolio: "Portifólio",
+			itsmedtime: "MeuMedicamento",
+			tastik: "Tastik",
+			privacy: "Política de Privacidade",
 		},
 		About: {
 			skills: "Habilidades",
@@ -189,6 +246,30 @@ export const translations: Record<Locale, Translations> = {
 					"Um aplicativo para criar listas personalizáveis, com organização fácil, para ajudar a aumentar a produtividade e simplificar o planejamento do dia.",
 			},
 			privacyPolicy: "Política de Privacidade",
+			privacy: {
+				lastUpdated: "Atualizado em: 4 de maio de 2025",
+				sections: {
+					personalData: {
+						title: "Dados Pessoais",
+						body: "Não coletamos nenhum dado pessoal. Seus dados pessoais são armazenados localmente no seu dispositivo ou no iCloud.",
+					},
+					inAppPurchases: {
+						title: "Compras no App",
+						body: "Utilizamos o serviço terceirizado RevenueCat para gerenciar compras no app, que pode coletar dados sobre seu dispositivo e uso do aplicativo. Para mais informações sobre quais dados são coletados e como são utilizados, consulte a política de privacidade da RevenueCat.",
+						button: "Política de Privacidade RevenueCat",
+					},
+					analytics: {
+						title: "Análises",
+						body: "{appName} utiliza o PostHog para análises, ajudando-nos a entender como os usuários interagem com o app e a melhorar a experiência. O PostHog coleta dados anônimos de uso, como aberturas do app, uso de recursos e relatórios de falhas. Esses dados nos ajudam a identificar pontos de melhoria e priorizar novas funcionalidades.",
+						button: "Política de Privacidade PostHog",
+					},
+					contact: {
+						title: "Contato",
+						body: "Se você tiver dúvidas ou sugestões sobre nossa política de privacidade, entre em contato pelo e-mail fabiolfp@gmail.com.",
+						button: "Fale Conosco",
+					},
+				},
+			},
 		},
 		Portfolio: {
 			welcome: "Bem-vindo ao Meu Portfólio de Apps",
