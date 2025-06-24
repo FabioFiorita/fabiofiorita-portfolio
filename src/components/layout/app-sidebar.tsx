@@ -150,7 +150,11 @@ export function AppSidebar() {
 										{app.items.slice(1).map((subItem) => (
 											<SidebarMenuSubItem key={subItem.title}>
 												<SidebarMenuSubButton asChild>
-													<a href={subItem.url}>
+													<a
+														href={subItem.url}
+														target="_blank"
+														rel="noopener noreferrer"
+													>
 														{subItem.icon && <subItem.icon />}
 														<span>
 															{subItem.title === "privacyPolicy"

@@ -58,7 +58,7 @@ export function AppCard({
 								<a href={detailsUrl}>{t("Portfolio.viewDetails")}</a>
 							</Button>
 							<Button size="sm" variant="outline" asChild>
-								<a href={appStoreUrl}>
+								<a href={appStoreUrl} target="_blank" rel="noopener noreferrer">
 									<ExternalLink className="size-4 mr-1" />
 									App Store
 								</a>
