@@ -134,15 +134,15 @@ export const translations: Record<Locale, Translations> = {
 			skills: "Skills",
 			focusArea: "Focus Area",
 			intro:
-				"Hello! I'm Fabio, an iOS developer based in São José dos Campos, Brazil.",
+				"Hi, I'm Fabio — an iOS developer based in São José dos Campos, Brazil.",
 			education:
-				"I hold a degree in Computer Engineering from Inatel and am passionate about crafting practical and intuitive solutions that make everyday life easier.",
+				"I have a degree in Computer Engineering from Inatel and a passion for creating intuitive solutions that simplify everyday life.",
 			itsMedTime:
 				"The ItsMedTime app was born in 2021 while I was still in college. It was inspired by a real need in my own family: my father, who takes medications regularly, struggled with generic reminder apps. This motivated me to create a tailored solution designed to simplify medication routines with greater clarity, control, and flexibility. Since then, I've nurtured and refined the project with great care, and today it stands as one of my proudest achievements.",
 			tastik:
 				"In 2023, I launched Tastik, an app dedicated to organizing daily tasks and lists — from shopping and quick expenses to recurring notes. The idea came from the absence of a simple yet versatile app that could consolidate various types of customized lists in one convenient place.",
 			technology:
-				"All my apps are developed exclusively for iOS, leveraging Swift, SwiftUI, and SwiftData alongside the latest Apple technologies. My goal is to deliver modern, private, and user-friendly experiences — always attentive to user feedback and continuously improving with every update.",
+				"I build all my apps exclusively for iOS using Swift, SwiftUI, and SwiftData, always incorporating the latest Apple technologies. My goal is to deliver modern, private, and user-friendly experiences — always attentive to user feedback and continuously improving with every update.",
 			focusAreasList: {
 				iOS: "iOS Development",
 				frontend: "Frontend Development",
@@ -243,8 +243,7 @@ export const translations: Record<Locale, Translations> = {
 		},
 		Portfolio: {
 			welcome: "Welcome to My App Portfolio",
-			subtitle:
-				"Hello, I'm Fábio Fiorita, Computer Engineer and Mobile Application Developer",
+			subtitle: "I'm Fábio Fiorita — a Computer Engineer and iOS App Developer",
 			learnMore: "About Me",
 			getInTouch: "Get In Touch",
 			viewDetails: "View Details",
@@ -261,7 +260,7 @@ export const translations: Record<Locale, Translations> = {
 				privacy: {
 					title: "Privacy by Design",
 					description:
-						"Implementing privacy-first architecture with secure data handling, local storage, and transparent data practices.",
+						"Designing with privacy in mind — using local storage, secure data handling, and transparent practices.",
 				},
 				modern: {
 					title: "Modern iOS Features",
@@ -301,7 +300,7 @@ export const translations: Record<Locale, Translations> = {
 					{
 						icon: "Zap",
 						title: "Interactive Widgets",
-						description: "Home Screen interactions",
+						description: "Interactive Home Screen features",
 					},
 					{
 						icon: "Shield",
@@ -327,15 +326,15 @@ export const translations: Record<Locale, Translations> = {
 			skills: "Habilidades",
 			focusArea: "Áreas de Foco",
 			intro:
-				"Olá! Sou Fabio, desenvolvedor iOS de São José dos Campos, Brasil.",
+				"Oi, sou o Fabio — desenvolvedor iOS em São José dos Campos, Brasil.",
 			education:
-				"Sou formado em Engenharia de Computação pelo Inatel e tenho paixão por criar soluções práticas e intuitivas que facilitam o dia a dia.",
+				"Formado em Engenharia de Computação pelo Inatel, tenho paixão por criar soluções intuitivas que simplificam o dia a dia.",
 			itsMedTime:
 				"O aplicativo ItsMedTime nasceu em 2021, enquanto eu ainda estava na faculdade. A inspiração veio de uma necessidade real na minha própria família: meu pai, que toma remédios regularmente, não se adaptava bem a apps genéricos de lembrete. Foi então que surgiu a ideia de criar uma solução específica, pensada para tornar essa rotina mais clara, controlada e flexível. Desde então, venho desenvolvendo o projeto com muito cuidado, e hoje ele é um dos meus principais trabalhos.",
 			tastik:
 				"Em 2023, lancei também o Tastik, um app focado em organizar tarefas e listas diárias — como compras, gastos rápidos ou anotações recorrentes. A ideia surgiu da falta de um app simples e versátil, capaz de reunir diferentes tipos de listas personalizadas em um só lugar.",
 			technology:
-				"Todos os meus aplicativos são desenvolvidos exclusivamente para iOS, utilizando Swift, SwiftUI e SwiftData, com as tecnologias mais recentes do ecossistema Apple. Meu foco é entregar experiências modernas, privadas e intuitivas — sempre ouvindo os usuários e aprimorando a cada versão.",
+				"Desenvolvo todos os meus aplicativos exclusivamente para iOS, com Swift, SwiftUI e SwiftData, usando sempre as tecnologias mais recentes da Apple. Meu foco é entregar experiências modernas, privadas e intuitivas — sempre ouvindo os usuários e aprimorando a cada versão.",
 			focusAreasList: {
 				iOS: "Desenvolvimento iOS",
 				frontend: "Desenvolvimento Frontend",
@@ -437,7 +436,7 @@ export const translations: Record<Locale, Translations> = {
 		Portfolio: {
 			welcome: "Bem-vindo ao Meu Portfólio de Apps",
 			subtitle:
-				"Olá, sou Fábio Fiorita, Engenheiro de Computação e Desenvolvedor de Aplicativos Móveis",
+				"Sou Fábio Fiorita — Engenheiro de Computação e Desenvolvedor de Apps iOS",
 			learnMore: "Sobre Mim",
 			getInTouch: "Entre em Contato",
 			viewDetails: "Ver Detalhes",
@@ -454,7 +453,7 @@ export const translations: Record<Locale, Translations> = {
 				privacy: {
 					title: "Privacidade por Design",
 					description:
-						"Implementando arquitetura com privacidade em primeiro lugar, dados seguros, armazenamento local e práticas transparentes.",
+						"Desenvolvendo com foco em privacidade — usando armazenamento local, dados protegidos e práticas transparentes.",
 				},
 				modern: {
 					title: "Recursos Modernos do iOS",
@@ -470,7 +469,7 @@ export const translations: Record<Locale, Translations> = {
 		},
 		Contact: {
 			message:
-				"Tem uma pergunta, sugestão ou feedback sobre meus aplicativos? Adoraria ouvir você! Por favor, envie um e-mail para o endereço abaixo e retornarei o mais breve possível.",
+				"Tem uma dúvida, sugestão ou feedback sobre meus apps? Vou adorar ouvir você. Envie um e-mail para o endereço abaixo e responderei o quanto antes!",
 			email: "fabiolfp@gmail.com",
 			sendEmail: "Enviar E-mail",
 		},
