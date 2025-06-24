@@ -314,7 +314,7 @@ export const translations: Record<Locale, Translations> = {
 		},
 	},
 	pt: {
-		Owner: { title: "Desenvolvedor de Apps" },
+		Owner: { title: "Desenvolvedor de Aplicativos" },
 		Navigation: {
 			general: "Geral",
 			about: "Sobre",
@@ -438,7 +438,7 @@ export const translations: Record<Locale, Translations> = {
 		Portfolio: {
 			welcome: "Bem-vindo ao Meu Portfólio de Apps",
 			subtitle:
-				"Sou Fábio Fiorita — Engenheiro de Computação e Desenvolvedor de Apps iOS",
+				"Sou Fábio Fiorita — Engenheiro de Computação e Desenvolvedor de Aplicativos iOS",
 			learnMore: "Sobre Mim",
 			getInTouch: "Entre em Contato",
 			viewDetails: "Ver Detalhes",
