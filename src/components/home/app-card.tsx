@@ -39,15 +39,15 @@ export function AppCard({
 						<Image
 							src={image}
 							alt={`${title} logo`}
-							width={100}
-							height={100}
+							width={80}
+							height={80}
 							className="rounded-xl"
 						/>
 					</div>
 				)}
 				<div className="flex-1">
 					<CardHeader>
-						<div className="flex items-center gap-2">
+						<div className="flex flex-col items-start lg:flex-row lg:items-center gap-2">
 							<CardTitle className="text-2xl">{title}</CardTitle>
 							<Badge className="text-shadow-2xs">{category}</Badge>
 						</div>
