@@ -1,5 +1,5 @@
 import { useTranslations } from "next-intl";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function AboutFocusAreas() {
 	const t = useTranslations();

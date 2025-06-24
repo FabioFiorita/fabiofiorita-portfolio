@@ -33,11 +33,27 @@ interface Translations {
 			title: string;
 			category: string;
 			shortDescription: string;
+			longDescription: string;
+			features: {
+				title: string;
+				description: string;
+				imageSrc: string;
+				imageAlt: string;
+				reverse: boolean;
+			}[];
 		};
 		tastik: {
 			title: string;
 			category: string;
 			shortDescription: string;
+			longDescription: string;
+			features: {
+				title: string;
+				description: string;
+				imageSrc: string;
+				imageAlt: string;
+				reverse: boolean;
+			}[];
 		};
 		privacyPolicy: string;
 		privacy: {
@@ -87,6 +103,19 @@ interface Translations {
 		email: string;
 		sendEmail: string;
 	};
+	AppPage: {
+		quickActions: {
+			appStore: string;
+		};
+		techStack: {
+			title: string;
+			features: {
+				icon: "Smartphone" | "Cloud" | "Zap" | "Shield";
+				title: string;
+				description: string;
+			}[];
+		};
+	};
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -127,12 +156,64 @@ export const translations: Record<Locale, Translations> = {
 				category: "Health",
 				shortDescription:
 					"A user-friendly app that helps you track medications, manage schedules, and improve adherence for better health outcomes.",
+				longDescription:
+					"A comprehensive medication management app that helps users track their prescriptions, set reminders, and maintain their health routine with seamless iCloud synchronization.",
+				features: [
+					{
+						title: "Medication List",
+						description:
+							"Your routine always in sight. View your medications with upcoming doses, remaining stock, and intake status — all in a clear and interactive interface.",
+						imageSrc: "/itsmedtime/en/list.png",
+						imageAlt:
+							"ItsMedTime medication list showing Ibuprofen, Losartan, and Vitamin D with dosages and status",
+						reverse: false,
+					},
+					{
+						title: "Charts",
+						description:
+							"Understand your habits with data. Track your progress, treatment adherence, and even medication expenses through simple and informative charts.",
+						imageSrc: "/itsmedtime/en/charts.png",
+						imageAlt:
+							"ItsMedTime reports screen showing ingestion status chart and medication usage statistics",
+						reverse: true,
+					},
+					{
+						title: "History",
+						description:
+							"Complete and organized records. View the history of intakes and refills by day, including amounts paid and detailed data by medication.",
+						imageSrc: "/itsmedtime/en/calendar.png",
+						imageAlt:
+							"ItsMedTime history screen with calendar view and medication intake records",
+						reverse: false,
+					},
+					{
+						title: "Interactive Widgets",
+						description:
+							"Quick access, right on the screen. Mark doses and check your schedules without even opening the app — with widgets on the home and lock screen.",
+						imageSrc: "/itsmedtime/en/widgets.png",
+						imageAlt:
+							"iOS home screen showing ItsMedTime widgets with medication schedules and quick actions",
+						reverse: true,
+					},
+					{
+						title: "Critical Notifications",
+						description:
+							"Alerts you actually receive. Get reminders that work even with your iPhone on silent or Do Not Disturb mode. Never miss an important dose.",
+						imageSrc: "/itsmedtime/en/notification.png",
+						imageAlt:
+							"iPhone lock screen showing critical medication reminder notification for Ibuprofen",
+						reverse: false,
+					},
+				],
 			},
 			tastik: {
 				title: "Tastik",
 				category: "Productivity",
 				shortDescription:
 					"An app for creating customizable lists with easy organization to help boost productivity and simplify planning your day.",
+				longDescription:
+					"An app for creating customizable lists with easy organization to help boost productivity and simplify planning your day.",
+				features: [],
 			},
 			privacyPolicy: "Privacy Policy",
 			privacy: {
@@ -200,6 +281,36 @@ export const translations: Record<Locale, Translations> = {
 			email: "fabiolfp@gmail.com",
 			sendEmail: "Send Email",
 		},
+		AppPage: {
+			quickActions: {
+				appStore: "View on App Store",
+			},
+			techStack: {
+				title: "Built with Modern iOS Technologies",
+				features: [
+					{
+						icon: "Smartphone",
+						title: "Swift & SwiftUI",
+						description: "Native iOS performance",
+					},
+					{
+						icon: "Cloud",
+						title: "SwiftData & iCloud",
+						description: "Seamless data sync",
+					},
+					{
+						icon: "Zap",
+						title: "Interactive Widgets",
+						description: "Home Screen interactions",
+					},
+					{
+						icon: "Shield",
+						title: "Privacy First",
+						description: "Local data storage",
+					},
+				],
+			},
+		},
 	},
 	pt: {
 		Owner: { title: "Desenvolvedor de Apps" },
@@ -238,12 +349,64 @@ export const translations: Record<Locale, Translations> = {
 				category: "Saúde",
 				shortDescription:
 					"Um app fácil de usar que ajuda você a controlar medicamentos, gerenciar horários e melhorar a adesão para melhores resultados de saúde.",
+				longDescription:
+					"Um aplicativo completo de gerenciamento de medicamentos que ajuda os usuários a rastrear suas prescrições, definir lembretes e manter sua rotina de saúde com sincronização perfeita do iCloud.",
+				features: [
+					{
+						title: "Lista de Medicamentos",
+						description:
+							"Sua rotina sempre à vista. Visualize seus medicamentos com as próximas doses, estoque restante e status de ingestão — tudo em uma interface clara e interativa.",
+						imageSrc: "/itsmedtime/pt/list.png",
+						imageAlt:
+							"Lista de medicamentos do ItsMedTime mostrando Ibuprofeno, Losartana e Vitamina D com dosagens e status",
+						reverse: false,
+					},
+					{
+						title: "Gráficos",
+						description:
+							"Entenda seus hábitos com dados. Acompanhe seu progresso, adesão ao tratamento e até despesas com medicamentos por meio de gráficos simples e informativos.",
+						imageSrc: "/itsmedtime/pt/charts.png",
+						imageAlt:
+							"Tela de relatórios do ItsMedTime mostrando gráfico de status de ingestão e estatísticas de uso de medicamentos",
+						reverse: true,
+					},
+					{
+						title: "Histórico",
+						description:
+							"Registros completos e organizados. Visualize o histórico de ingestões e recargas por dia, incluindo valores pagos e dados detalhados por medicamento.",
+						imageSrc: "/itsmedtime/pt/calendar.png",
+						imageAlt:
+							"Tela de histórico do ItsMedTime com visão de calendário e registros de ingestão de medicamentos",
+						reverse: false,
+					},
+					{
+						title: "Widgets Interativos",
+						description:
+							"Acesso rápido, direto na tela. Marque doses e verifique seus horários sem precisar abrir o app — com widgets na tela de início e de bloqueio.",
+						imageSrc: "/itsmedtime/pt/widgets.png",
+						imageAlt:
+							"Tela inicial do iOS mostrando widgets do ItsMedTime com horários de medicamentos e ações rápidas",
+						reverse: true,
+					},
+					{
+						title: "Notificações Críticas",
+						description:
+							"Alertas que você realmente recebe. Receba lembretes que funcionam mesmo com o iPhone no modo silencioso ou Não Perturbe. Nunca mais perca uma dose importante.",
+						imageSrc: "/itsmedtime/pt/notification.png",
+						imageAlt:
+							"Tela de bloqueio do iPhone mostrando notificação crítica de lembrete de medicamento para Ibuprofeno",
+						reverse: false,
+					},
+				],
 			},
 			tastik: {
 				title: "Tastik",
 				category: "Produtividade",
 				shortDescription:
 					"Um aplicativo para criar listas personalizáveis, com organização fácil, para ajudar a aumentar a produtividade e simplificar o planejamento do dia.",
+				longDescription:
+					"Um aplicativo para criar listas personalizáveis com organização fácil para ajudar a aumentar a produtividade e simplificar o planejamento do seu dia.",
+				features: [],
 			},
 			privacyPolicy: "Política de Privacidade",
 			privacy: {
@@ -310,6 +473,36 @@ export const translations: Record<Locale, Translations> = {
 				"Tem uma pergunta, sugestão ou feedback sobre meus aplicativos? Adoraria ouvir você! Por favor, envie um e-mail para o endereço abaixo e retornarei o mais breve possível.",
 			email: "fabiolfp@gmail.com",
 			sendEmail: "Enviar E-mail",
+		},
+		AppPage: {
+			quickActions: {
+				appStore: "Ver na App Store",
+			},
+			techStack: {
+				title: "Construído com Tecnologias Modernas do iOS",
+				features: [
+					{
+						icon: "Smartphone",
+						title: "Swift & SwiftUI",
+						description: "Performance nativa iOS",
+					},
+					{
+						icon: "Cloud",
+						title: "SwiftData & iCloud",
+						description: "Sincronização de dados",
+					},
+					{
+						icon: "Zap",
+						title: "Widgets Interativos",
+						description: "Interação na tela inicial",
+					},
+					{
+						icon: "Shield",
+						title: "Privacidade em Primeiro Lugar",
+						description: "Dados armazenados localmente",
+					},
+				],
+			},
 		},
 	},
 };

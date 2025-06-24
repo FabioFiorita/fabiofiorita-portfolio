@@ -1,15 +1,15 @@
-import { ExternalLink, Smartphone } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
-import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import {
 	Card,
 	CardContent,
 	CardDescription,
 	CardHeader,
 	CardTitle,
-} from "./ui/card";
+} from "@/components/ui/card";
 
 interface AppCardProps {
 	title: string;

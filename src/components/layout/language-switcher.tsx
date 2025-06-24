@@ -3,13 +3,13 @@
 import { Languages } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useLocale } from "next-intl";
+import { Button } from "@/components/ui/button";
 import {
 	DropdownMenu,
 	DropdownMenuContent,
 	DropdownMenuItem,
 	DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Button } from "./ui/button";
 
 const languages = [
 	{ locale: "en", label: "English", flag: "🇺🇸" },

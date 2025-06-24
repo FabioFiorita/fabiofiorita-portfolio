@@ -4,8 +4,8 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
 import { cookies } from "next/headers";
-import { AppSidebar } from "@/components/app-sidebar";
-import { Header } from "@/components/header";
+import { AppSidebar } from "@/components/layout/app-sidebar";
+import { Header } from "@/components/layout/header";
 import { SidebarProvider } from "@/components/ui/sidebar";
 
 const geistSans = Geist({

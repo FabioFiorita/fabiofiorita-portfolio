@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
-import { Button } from "./ui/button";
+import { Button } from "@/components/ui/button";
 
 export function HeroSection() {
 	const t = useTranslations();

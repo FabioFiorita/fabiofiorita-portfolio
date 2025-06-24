@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
-import { Badge } from "./ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export function AboutSkills() {
 	const t = useTranslations();
@@ -8,17 +8,17 @@ export function AboutSkills() {
 		"Swift",
 		"SwiftUI",
 		"iOS Development",
-        "Typescript",
+		"Typescript",
 		"React",
 		"Next.js",
 		"UI/UX Design",
-        "Tailwind",
-        "Node",
-        "NestJS",
-        "Prisma",
+		"Tailwind",
+		"Node",
+		"NestJS",
+		"Prisma",
 		"Firebase",
-        "Supabase",
-        "Docker",
+		"Supabase",
+		"Docker",
 	];
 	return (
 		<Card>

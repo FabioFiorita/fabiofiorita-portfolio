@@ -1,4 +1,4 @@
-import { ContactCard } from "@/components/contact-card";
+import { ContactCard } from "@/components/contact/contact-card";
 
 export default function ContactPage() {
 	return (

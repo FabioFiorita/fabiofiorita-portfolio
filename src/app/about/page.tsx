@@ -1,6 +1,6 @@
-import { AboutBio } from "@/components/about-bio";
-import { AboutFocusAreas } from "@/components/about-focus-areas";
-import { AboutSkills } from "@/components/about-skills";
+import { AboutBio } from "@/components/about/about-bio";
+import { AboutFocusAreas } from "@/components/about/about-focus-areas";
+import { AboutSkills } from "@/components/about/about-skills";
 
 export default function AboutPage() {
 	return (

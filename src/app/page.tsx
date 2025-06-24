@@ -1,6 +1,6 @@
-import { DevelopmentApproach } from "@/components/development-approach";
-import { FeaturedApps } from "@/components/featured-apps";
-import { HeroSection } from "@/components/hero-section";
+import { DevelopmentApproach } from "@/components/home/development-approach";
+import { FeaturedApps } from "@/components/home/featured-apps";
+import { HeroSection } from "@/components/home/hero-section";
 
 export default function HomePage() {
 	return (
