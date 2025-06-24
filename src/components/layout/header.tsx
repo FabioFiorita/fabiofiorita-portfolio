@@ -19,7 +19,7 @@ export function Header() {
 	const segments = pathname.split("/").filter(Boolean);
 
 	return (
-		<header className="flex h-12 shrink-0 items-center gap-2 px-4 border-b">
+		<header className="flex h-16 mt-0.25 shrink-0 items-center gap-2 px-4 border-b">
 			<SidebarTrigger className="-ml-1" />
 			<Separator orientation="vertical" className="max-h-4" />
 			<Breadcrumb>
