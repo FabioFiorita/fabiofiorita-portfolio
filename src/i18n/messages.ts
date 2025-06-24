@@ -289,23 +289,25 @@ export const translations: Record<Locale, Translations> = {
 				features: [
 					{
 						icon: "Smartphone",
-						title: "Swift & SwiftUI",
-						description: "Native iOS performance",
+						title: "Native iOS Experience",
+						description: "Fast, smooth, and fully integrated with your iPhone",
 					},
 					{
 						icon: "Cloud",
-						title: "SwiftData & iCloud",
-						description: "Seamless data sync",
+						title: "iCloud Sync",
+						description:
+							"Your data safely updated on your device and your iCloud account",
 					},
 					{
 						icon: "Zap",
 						title: "Interactive Widgets",
-						description: "Interactive Home Screen features",
+						description: "Easy control right from your home screen",
 					},
 					{
 						icon: "Shield",
 						title: "Privacy First",
-						description: "Local data storage",
+						description:
+							"Data encrypted and stored locally and in your iCloud account",
 					},
 				],
 			},
@@ -482,23 +484,25 @@ export const translations: Record<Locale, Translations> = {
 				features: [
 					{
 						icon: "Smartphone",
-						title: "Swift & SwiftUI",
-						description: "Performance nativa iOS",
+						title: "Experiência Nativa iOS",
+						description: "Rápido, fluido e integrado ao seu iPhone",
 					},
 					{
 						icon: "Cloud",
-						title: "SwiftData & iCloud",
-						description: "Sincronização de dados",
+						title: "Sincronização iCloud",
+						description:
+							"Seus dados seguros e atualizados no dispositivo e na sua conta iCloud",
 					},
 					{
 						icon: "Zap",
 						title: "Widgets Interativos",
-						description: "Interação na tela inicial",
+						description: "Controle fácil direto na tela inicial",
 					},
 					{
 						icon: "Shield",
 						title: "Privacidade em Primeiro Lugar",
-						description: "Dados armazenados localmente",
+						description:
+							"Dados criptografados e armazenados localmente e na sua conta iCloud",
 					},
 				],
 			},
