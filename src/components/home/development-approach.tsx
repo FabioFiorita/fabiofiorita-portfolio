@@ -36,10 +36,10 @@ export function DevelopmentApproach() {
 			</div>
 			<div className="grid gap-4 md:grid-cols-2">
 				{approaches.map((approach) => (
-					<Card key={approach.key} className="border-l-4 border-l-blue-500">
+					<Card key={approach.key} className="border-l-4 border-l-primary-500">
 						<CardHeader className="pb-3">
 							<CardTitle className="flex items-center gap-2 text-lg">
-								<approach.icon className="size-5 text-blue-600 dark:text-blue-400" />
+								<approach.icon className="size-5 text-primary-600 dark:text-primary-400" />
 								{t(`DevelopmentApproach.approaches.${approach.key}.title`)}
 							</CardTitle>
 						</CardHeader>

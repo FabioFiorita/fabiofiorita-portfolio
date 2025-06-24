@@ -4,6 +4,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
 import { cookies } from "next/headers";
+import { ThemeProvider } from "next-themes";
 import { AppSidebar } from "@/components/layout/app-sidebar";
 import { Header } from "@/components/layout/header";
 import { SidebarProvider } from "@/components/ui/sidebar";
@@ -20,7 +21,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
 	title: "Fábio Fiorita",
-	description: "Mobile Applications Portfolio",
+	description: "iOS App Developer specializing in Swift, SwiftUI",
 };
 
 export default async function RootLayout({
@@ -33,18 +34,25 @@ export default async function RootLayout({
 	const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
 
 	return (
-		<html lang={locale}>
+		<html lang={locale} suppressHydrationWarning>
 			<body
 				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<NextIntlClientProvider>
-					<SidebarProvider defaultOpen={defaultOpen}>
-						<AppSidebar />
-						<main className="w-full">
-							<Header />
-							{children}
-						</main>
-					</SidebarProvider>
+					<ThemeProvider
+						attribute="class"
+						defaultTheme="system"
+						enableSystem
+						disableTransitionOnChange
+					>
+						<SidebarProvider defaultOpen={defaultOpen}>
+							<AppSidebar />
+							<main className="w-full">
+								<Header />
+								{children}
+							</main>
+						</SidebarProvider>
+					</ThemeProvider>
 				</NextIntlClientProvider>
 			</body>
 		</html>

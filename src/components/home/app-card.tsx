@@ -1,5 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -55,7 +56,7 @@ export function AppCard({
 					<CardContent>
 						<div className="flex gap-4 mt-4">
 							<Button size="sm" asChild>
-								<a href={detailsUrl}>{t("Portfolio.viewDetails")}</a>
+								<Link href={detailsUrl}>{t("Portfolio.viewDetails")}</Link>
 							</Button>
 							<Button size="sm" variant="outline" asChild>
 								<a href={appStoreUrl} target="_blank" rel="noopener noreferrer">

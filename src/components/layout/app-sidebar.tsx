@@ -1,4 +1,5 @@
 import { Home, ListCheck, Mail, Pill, Shield, Store, User } from "lucide-react";
+import Link from "next/link";
 import { useTranslations } from "next-intl";
 import {
 	Sidebar,
@@ -17,6 +18,7 @@ import {
 	SidebarRail,
 } from "@/components/ui/sidebar";
 import { LanguageSwitcher } from "./language-switcher";
+import { ThemeToggle } from "./theme-toggle";
 
 export function AppSidebar() {
 	const t = useTranslations();
@@ -57,6 +59,7 @@ export function AppSidebar() {
 						title: "App Store",
 						url: "https://apps.apple.com/gb/app/itsmedtime/id1580757092",
 						icon: Store,
+						isExternalLink: true,
 					},
 					{
 						title: "privacyPolicy",
@@ -78,6 +81,7 @@ export function AppSidebar() {
 						title: "App Store",
 						url: "https://apps.apple.com/gb/app/tastik-tasks-and-lists/id6459197048",
 						icon: Store,
+						isExternalLink: true,
 					},
 					{
 						title: "privacyPolicy",
@@ -95,7 +99,7 @@ export function AppSidebar() {
 				<SidebarMenu>
 					<SidebarMenuItem>
 						<SidebarMenuButton size="lg" asChild>
-							<a href="/" className="font-semibold">
+							<Link href="/" className="font-semibold">
 								<div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
 									<Home className="size-4" />
 								</div>
@@ -107,7 +111,7 @@ export function AppSidebar() {
 										{portfolioData.owner.title}
 									</span>
 								</div>
-							</a>
+							</Link>
 						</SidebarMenuButton>
 					</SidebarMenuItem>
 				</SidebarMenu>
@@ -122,10 +126,10 @@ export function AppSidebar() {
 								{section.items.map((item) => (
 									<SidebarMenuItem key={item.title}>
 										<SidebarMenuButton asChild>
-											<a href={item.url}>
+											<Link href={item.url}>
 												<item.icon />
 												<span>{item.title}</span>
-											</a>
+											</Link>
 										</SidebarMenuButton>
 									</SidebarMenuItem>
 								))}
@@ -141,30 +145,37 @@ export function AppSidebar() {
 							<SidebarMenu>
 								<SidebarMenuItem>
 									<SidebarMenuButton asChild>
-										<a href={app.url}>
+										<Link href={app.url}>
 											<app.icon />
 											<span>{t(`Apps.${app.key}.title`)}</span>
-										</a>
+										</Link>
 									</SidebarMenuButton>
 									<SidebarMenuSub>
 										{app.items.slice(1).map((subItem) => (
 											<SidebarMenuSubItem key={subItem.title}>
-												<SidebarMenuSubButton asChild>
-													<a
-														href={subItem.url}
-														target="_blank"
-														rel="noopener noreferrer"
-													>
-														{subItem.icon && <subItem.icon />}
-														<span>
-															{subItem.title === "privacyPolicy"
-																? t("Apps.privacyPolicy")
-																: subItem.title === app.key
-																	? t(`Apps.${app.key}.title`)
+												{subItem.isExternalLink ? (
+													<SidebarMenuSubButton asChild>
+														<a
+															href={subItem.url}
+															target="_blank"
+															rel="noopener noreferrer"
+														>
+															{subItem.icon && <subItem.icon />}
+															<span>{subItem.title}</span>
+														</a>
+													</SidebarMenuSubButton>
+												) : (
+													<SidebarMenuSubButton asChild>
+														<Link href={subItem.url}>
+															{subItem.icon && <subItem.icon />}
+															<span className="flex">
+																{subItem.title === "privacyPolicy"
+																	? t("Apps.privacyPolicy")
 																	: subItem.title}
-														</span>
-													</a>
-												</SidebarMenuSubButton>
+															</span>
+														</Link>
+													</SidebarMenuSubButton>
+												)}
 											</SidebarMenuSubItem>
 										))}
 									</SidebarMenuSub>
@@ -176,6 +187,9 @@ export function AppSidebar() {
 			</SidebarContent>
 			<SidebarFooter>
 				<SidebarMenu>
+					<SidebarMenuItem>
+						<ThemeToggle />
+					</SidebarMenuItem>
 					<SidebarMenuItem>
 						<LanguageSwitcher />
 					</SidebarMenuItem>
