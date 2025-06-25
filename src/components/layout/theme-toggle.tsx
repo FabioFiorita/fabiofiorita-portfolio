@@ -1,11 +1,13 @@
 "use client";
 
 import { Moon, Sun } from "lucide-react";
+import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 
 export function ThemeToggle() {
+	const t = useTranslations();
 	const { theme, setTheme } = useTheme();
 	const [mounted, setMounted] = useState(false);
 
@@ -34,7 +36,11 @@ export function ThemeToggle() {
 			) : (
 				<Moon className="size-4" />
 			)}
-			<span>{theme === "dark" ? "Light Mode" : "Dark Mode"}</span>
+			<span>
+				{theme === "dark"
+					? t("Preferences.lightMode")
+					: t("Preferences.darkMode")}
+			</span>
 		</Button>
 	);
 }

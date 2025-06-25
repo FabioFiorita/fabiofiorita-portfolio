@@ -4,6 +4,10 @@ interface Translations {
 	Owner: {
 		title: string;
 	};
+	Preferences: {
+		lightMode: string;
+		darkMode: string;
+	};
 	Navigation: {
 		general: string;
 		about: string;
@@ -121,6 +125,10 @@ interface Translations {
 export const translations: Record<Locale, Translations> = {
 	en: {
 		Owner: { title: "App Developer" },
+		Preferences: {
+			lightMode: "Light Mode",
+			darkMode: "Dark Mode",
+		},
 		Navigation: {
 			general: "General",
 			about: "About",
@@ -315,6 +323,10 @@ export const translations: Record<Locale, Translations> = {
 	},
 	pt: {
 		Owner: { title: "Desenvolvedor de Aplicativos" },
+		Preferences: {
+			lightMode: "Modo Claro",
+			darkMode: "Modo Escuro",
+		},
 		Navigation: {
 			general: "Geral",
 			about: "Sobre",
