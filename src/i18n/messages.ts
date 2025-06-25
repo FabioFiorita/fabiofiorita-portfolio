@@ -134,15 +134,15 @@ export const translations: Record<Locale, Translations> = {
 			skills: "Skills",
 			focusArea: "Focus Area",
 			intro:
-				"Hi, I'm Fabio — an iOS developer based in São José dos Campos, Brazil.",
+				"Hi, I'm Fábio — an iOS developer based in São José dos Campos, Brazil.",
 			education:
 				"I have a degree in Computer Engineering from Inatel and a passion for creating intuitive solutions that simplify everyday life.",
 			itsMedTime:
-				"The ItsMedTime app was born in 2021 while I was still in college. It was inspired by a real need in my own family: my father, who takes medications regularly, struggled with generic reminder apps. This motivated me to create a tailored solution designed to simplify medication routines with greater clarity, control, and flexibility. Since then, I've nurtured and refined the project with great care, and today it stands as one of my proudest achievements.",
+				"The ItsMedTime app was born in 2021 while I was still in college. It was inspired by a real need in my own family: my father, who takes medications regularly, struggled with generic reminder applications. This motivated me to create a tailored solution designed to simplify medication routines with greater clarity, control, and flexibility. Since then, I've nurtured and refined the project with great care, and today it stands as one of my proudest achievements.",
 			tastik:
 				"In 2023, I launched Tastik, an app dedicated to organizing daily tasks and lists — from shopping and quick expenses to recurring notes. The idea came from the absence of a simple yet versatile app that could consolidate various types of customized lists in one convenient place.",
 			technology:
-				"I build all my apps exclusively for iOS using Swift, SwiftUI, and SwiftData, always incorporating the latest Apple technologies. My goal is to deliver modern, private, and user-friendly experiences — always attentive to user feedback and continuously improving with every update.",
+				"I build all my applications exclusively for iOS using Swift, SwiftUI, and SwiftData, always incorporating the latest Apple technologies. My goal is to deliver modern, private, and user-friendly experiences — always attentive to user feedback and continuously improving with every update.",
 			focusAreasList: {
 				iOS: "iOS Development",
 				frontend: "Frontend Development",
@@ -255,7 +255,7 @@ export const translations: Record<Locale, Translations> = {
 				iosFirst: {
 					title: "iOS-First Development",
 					description:
-						"Building native iOS apps with Swift and SwiftUI, following Apple's Human Interface Guidelines and best practices.",
+						"Building native iOS applications with Swift and SwiftUI, following Apple's Human Interface Guidelines and best practices.",
 				},
 				privacy: {
 					title: "Privacy by Design",
@@ -328,11 +328,11 @@ export const translations: Record<Locale, Translations> = {
 			skills: "Habilidades",
 			focusArea: "Áreas de Foco",
 			intro:
-				"Oi, sou o Fabio — desenvolvedor iOS em São José dos Campos, Brasil.",
+				"Oi, sou o Fábio — desenvolvedor iOS em São José dos Campos, Brasil.",
 			education:
 				"Formado em Engenharia de Computação pelo Inatel, tenho paixão por criar soluções intuitivas que simplificam o dia a dia.",
 			itsMedTime:
-				"O aplicativo MeuMedicamento nasceu em 2021, enquanto eu ainda estava na faculdade. A inspiração veio de uma necessidade real na minha própria família: meu pai, que toma remédios regularmente, não se adaptava bem a apps genéricos de lembrete. Foi então que surgiu a ideia de criar uma solução específica, pensada para tornar essa rotina mais clara, controlada e flexível. Desde então, venho desenvolvendo o projeto com muito cuidado, e hoje ele é um dos meus principais trabalhos.",
+				"O aplicativo MeuMedicamento nasceu em 2021, enquanto eu ainda estava na faculdade. A inspiração veio de uma necessidade real na minha própria família: meu pai, que toma remédios regularmente, não se adaptava bem a aplicativos genéricos de lembrete. Foi então que surgiu a ideia de criar uma solução específica, pensada para tornar essa rotina mais clara, controlada e flexível. Desde então, venho desenvolvendo o projeto com muito cuidado, e hoje ele é um dos meus principais trabalhos.",
 			tastik:
 				"Em 2023, lancei também o Tastik, um app focado em organizar tarefas e listas diárias — como compras, gastos rápidos ou anotações recorrentes. A ideia surgiu da falta de um app simples e versátil, capaz de reunir diferentes tipos de listas personalizadas em um só lugar.",
 			technology:
@@ -436,7 +436,7 @@ export const translations: Record<Locale, Translations> = {
 			},
 		},
 		Portfolio: {
-			welcome: "Bem-vindo ao Meu Portfólio de Apps",
+			welcome: "Bem-vindo ao Meu Portfólio de Aplicativos",
 			subtitle:
 				"Sou Fábio Fiorita — Engenheiro de Computação e Desenvolvedor de Aplicativos iOS",
 			learnMore: "Sobre Mim",
@@ -450,7 +450,7 @@ export const translations: Record<Locale, Translations> = {
 				iosFirst: {
 					title: "Desenvolvimento iOS-First",
 					description:
-						"Construindo apps nativos para iOS com Swift e SwiftUI, seguindo as diretrizes e melhores práticas da Apple.",
+						"Construindo aplicativos nativos para iOS com Swift e SwiftUI, seguindo as diretrizes e melhores práticas da Apple.",
 				},
 				privacy: {
 					title: "Privacidade por Design",
@@ -471,7 +471,7 @@ export const translations: Record<Locale, Translations> = {
 		},
 		Contact: {
 			message:
-				"Tem uma dúvida, sugestão ou feedback sobre meus apps? Vou adorar ouvir você. Envie um e-mail para o endereço abaixo e responderei o quanto antes!",
+				"Tem uma dúvida, sugestão ou feedback sobre meus aplicativos? Vou adorar ouvir você. Envie um e-mail para o endereço abaixo e responderei o quanto antes!",
 			email: "fabiolfp@gmail.com",
 			sendEmail: "Enviar E-mail",
 		},
