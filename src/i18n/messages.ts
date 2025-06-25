@@ -220,8 +220,57 @@ export const translations: Record<Locale, Translations> = {
 				shortDescription:
 					"An app for creating customizable lists with easy organization to help boost productivity and simplify planning your day.",
 				longDescription:
-					"An app for creating customizable lists with easy organization to help boost productivity and simplify planning your day.",
-				features: [],
+					"Tastik is your all-in-one app for lists, tasks, and projects. Make checklists, track numbers, manage budgets, or plan anything—your way. Super flexible, easy to use, and with interactive widgets so your lists are always just a tap away.",
+				features: [
+					{
+						title: "Stay On Top of It All",
+						description:
+							"Check things off, keep life moving, and never miss a beat.",
+						imageSrc: "/tastik/en/quickItems.png",
+						imageAlt: "Tastik showing a checklist with quick items.",
+						reverse: false,
+					},
+					{
+						title: "Count What Matters",
+						description:
+							"Keep tabs on anything—track, adjust, and stay in control.",
+						imageSrc: "/tastik/en/stepper.png",
+						imageAlt: "Tastik stepper control for counting items.",
+						reverse: true,
+					},
+					{
+						title: "Make Every Number Count",
+						description:
+							"Track your money, tally your stuff—no sweat, no spreadsheets.",
+						imageSrc: "/tastik/en/calculator.png",
+						imageAlt: "Tastik calculator for quick calculations in lists.",
+						reverse: false,
+					},
+					{
+						title: "Go With the Flow",
+						description:
+							"Move tasks around, see progress, and keep projects rolling.",
+						imageSrc: "/tastik/en/kanban.png",
+						imageAlt: "Tastik kanban board to organize tasks.",
+						reverse: true,
+					},
+					{
+						title: "Lists Without Limits",
+						description:
+							"Mix, match, and make it yours—organize anything, your way.",
+						imageSrc: "/tastik/en/multi.png",
+						imageAlt: "Tastik showcasing multiple types of lists.",
+						reverse: false,
+					},
+					{
+						title: "Your Lists, Always Within Reach",
+						description:
+							"Access and update your tasks instantly with interactive widgets—right from your home screen.",
+						imageSrc: "/tastik/en/widgets.png",
+						imageAlt: "Tastik interactive widgets on the home screen.",
+						reverse: true,
+					},
+				],
 			},
 			privacyPolicy: "Privacy Policy",
 			privacy: {
@@ -418,8 +467,56 @@ export const translations: Record<Locale, Translations> = {
 				shortDescription:
 					"Um aplicativo para criar listas personalizáveis, com organização fácil, para ajudar a aumentar a produtividade e simplificar o planejamento do dia.",
 				longDescription:
-					"Um aplicativo para criar listas personalizáveis com organização fácil para ajudar a aumentar a produtividade e simplificar o planejamento do seu dia.",
-				features: [],
+					"O Tastik é o app pra você criar listas, anotar tarefas, controlar projetos ou só organizar o dia. Tudo do seu jeito, fácil de mexer e com widgets pra acessar rapidinho.",
+				features: [
+					{
+						title: "Não Deixe Nada Passar",
+						description:
+							"Marque o que fez, toque a vida, e fique sempre em dia.",
+						imageSrc: "/tastik/pt/quickItems.png",
+						imageAlt: "Tastik mostrando uma checklist com itens rápidos.",
+						reverse: false,
+					},
+					{
+						title: "Conte o Que Importa",
+						description:
+							"Controle quantidades, ajuste fácil, tudo sob medida pra você.",
+						imageSrc: "/tastik/pt/stepper.png",
+						imageAlt: "Controle de stepper do Tastik para contagem de itens.",
+						reverse: true,
+					},
+					{
+						title: "Cada Número na Conta",
+						description:
+							"Anote gastos, faça contas, sem complicação nem planilha.",
+						imageSrc: "/tastik/pt/calculator.png",
+						imageAlt: "Calculadora do Tastik para cálculos rápidos em listas.",
+						reverse: false,
+					},
+					{
+						title: "Deixe as Ideias Fluírem",
+						description:
+							"Arraste tarefas, veja o progresso, projetos sem enrolação.",
+						imageSrc: "/tastik/pt/kanban.png",
+						imageAlt: "Quadro kanban do Tastik para organizar tarefas.",
+						reverse: true,
+					},
+					{
+						title: "Listas Sem Limites",
+						description: "Misture, organize, invente—do seu jeito, sem regra.",
+						imageSrc: "/tastik/pt/multi.png",
+						imageAlt: "Tastik exibindo múltiplos tipos de listas.",
+						reverse: false,
+					},
+					{
+						title: "Suas Listas Sempre à Mão",
+						description:
+							"Acesse e atualize tarefas na hora com widgets interativos—direto da tela inicial.",
+						imageSrc: "/tastik/pt/widgets.png",
+						imageAlt: "Widgets interativos do Tastik na tela inicial.",
+						reverse: true,
+					},
+				],
 			},
 			privacyPolicy: "Política de Privacidade",
 			privacy: {
