@@ -358,7 +358,7 @@ export const translations: Record<Locale, Translations> = {
 					{
 						icon: "Zap",
 						title: "Interactive Widgets",
-						description: "Easy control right from your home screen",
+						description: "Perform various app actions directly from the home screen",
 					},
 					{
 						icon: "Shield",
@@ -380,7 +380,7 @@ export const translations: Record<Locale, Translations> = {
 			general: "Geral",
 			about: "Sobre",
 			contact: "Contato",
-			portfolio: "Portifólio",
+			portfolio: "Portfólio",
 			itsmedtime: "MeuMedicamento",
 			tastik: "Tastik",
 			privacy: "Política de Privacidade",
@@ -389,13 +389,13 @@ export const translations: Record<Locale, Translations> = {
 			skills: "Habilidades",
 			focusArea: "Áreas de Foco",
 			intro:
-				"Oi, sou o Fábio — desenvolvedor iOS em São José dos Campos, Brasil.",
+				"Oi, sou o Fábio — desenvolvedor iOS de São José dos Campos, Brasil.",
 			education:
 				"Formado em Engenharia de Computação pelo Inatel, tenho paixão por criar soluções intuitivas que simplificam o dia a dia.",
 			itsMedTime:
 				"O aplicativo MeuMedicamento nasceu em 2021, enquanto eu ainda estava na faculdade. A inspiração veio de uma necessidade real na minha própria família: meu pai, que toma remédios regularmente, não se adaptava bem a aplicativos genéricos de lembrete. Foi então que surgiu a ideia de criar uma solução específica, pensada para tornar essa rotina mais clara, controlada e flexível. Desde então, venho desenvolvendo o projeto com muito cuidado, e hoje ele é um dos meus principais trabalhos.",
 			tastik:
-				"Em 2023, lancei também o Tastik, um app focado em organizar tarefas e listas diárias — como compras, gastos rápidos ou anotações recorrentes. A ideia surgiu da falta de um app simples e versátil, capaz de reunir diferentes tipos de listas personalizadas em um só lugar.",
+				"Em 2023, lancei também o Tastik, um aplicativo focado em organizar tarefas e listas diárias — como compras, gastos rápidos ou anotações recorrentes. A ideia surgiu da falta de um aplicativo simples e versátil, capaz de reunir diferentes tipos de listas personalizadas em um só lugar.",
 			technology:
 				"Desenvolvo todos os meus aplicativos exclusivamente para iOS, com Swift, SwiftUI e SwiftData, usando sempre as tecnologias mais recentes da Apple. Meu foco é entregar experiências modernas, privadas e intuitivas — sempre ouvindo os usuários e aprimorando a cada versão.",
 			focusAreasList: {
@@ -410,7 +410,7 @@ export const translations: Record<Locale, Translations> = {
 				title: "MeuMedicamento",
 				category: "Saúde",
 				shortDescription:
-					"Um app fácil de usar que ajuda você a controlar medicamentos, gerenciar horários e melhorar a adesão para melhores resultados de saúde.",
+					"Um aplicativo fácil de usar que ajuda você a controlar medicamentos, gerenciar horários e melhorar a adesão para melhores resultados de saúde.",
 				longDescription:
 					"Um aplicativo completo de gerenciamento de medicamentos que ajuda os usuários a rastrear suas prescrições, definir lembretes e manter sua rotina de saúde com sincronização perfeita do iCloud.",
 				features: [
@@ -444,7 +444,7 @@ export const translations: Record<Locale, Translations> = {
 					{
 						title: "Widgets Interativos",
 						description:
-							"Acesso rápido, direto na tela. Marque doses e verifique seus horários sem precisar abrir o app — com widgets na tela de início e de bloqueio.",
+							"Acesso rápido, direto na tela. Marque doses e verifique seus horários sem precisar abrir o aplicativo — com widgets na tela de início e de bloqueio.",
 						imageSrc: "/itsmedtime/pt/widgets.png",
 						imageAlt:
 							"Tela inicial do iOS mostrando widgets do ItsMedTime com horários de medicamentos e ações rápidas",
@@ -465,7 +465,7 @@ export const translations: Record<Locale, Translations> = {
 				title: "Tastik",
 				category: "Produtividade",
 				shortDescription:
-					"O Tastik é o app pra você organizar tudo que não cabe no calendário. Crie listas, controle quantidades, separe tarefas em seções e acesse tudo rapidinho pelo widget. Simples, prático e do seu jeito.",
+					"O Tastik é o aplicativo pra você organizar tudo que não cabe no calendário. Crie listas, controle quantidades, separe tarefas em seções e acesse tudo rapidinho pelo widget. Simples, prático e do seu jeito.",
 				longDescription:
 					"Tastik não é sobre lembretes ou prazos — é sobre todas as pequenas (e grandes) coisas que você quer acompanhar, sem a pressão de um calendário. É seu lugar de referência para aquelas listas contínuas: compras, viagens, ideias, coisas que você quer experimentar, projetos sem prazo ou apenas aquelas coisas aleatórias que surgem no seu dia. Você pode fazer listas clássicas para qualquer coisa, acompanhar números com steppers, manter um total acumulado para orçamentos ou organizar tarefas em seções simples no estilo kanban, como Para Fazer, Fazendo e Feito. Quer misturar tudo? Crie seu próprio estilo de lista com o que precisar, tudo em um só lugar. E com widgets interativos, você pode ver e atualizar suas listas diretamente na tela inicial — sem complicação, sem esforço.",
 				features: [
@@ -488,7 +488,7 @@ export const translations: Record<Locale, Translations> = {
 					{
 						title: "Cada Número na Conta",
 						description:
-							"Sua lista vira calculadora. Some gastos, controle orçamento, faça contas rápidas—tudo ali, sem precisar de planilha ou outro app.",
+							"Sua lista vira calculadora. Some gastos, controle orçamento, faça contas rápidas—tudo ali, sem precisar de planilha ou outro aplicativo.",
 						imageSrc: "/tastik/pt/calculator.png",
 						imageAlt: "Calculadora do Tastik para cálculos rápidos em listas.",
 						reverse: false,
@@ -512,7 +512,7 @@ export const translations: Record<Locale, Translations> = {
 					{
 						title: "Suas Listas Sempre à Mão",
 						description:
-							"Acesse e atualize suas listas direto do widget na tela inicial. Adicione, marque ou edite rapidinho, sem nem abrir o app.",
+							"Acesse e atualize suas listas direto do widget na tela inicial. Adicione, marque ou edite rapidinho, sem nem abrir o aplicativo.",
 						imageSrc: "/tastik/pt/widgets.png",
 						imageAlt: "Widgets interativos do Tastik na tela inicial.",
 						reverse: true,
@@ -528,13 +528,13 @@ export const translations: Record<Locale, Translations> = {
 						body: "Não coletamos nenhum dado pessoal. Seus dados pessoais são armazenados localmente no seu dispositivo ou no iCloud.",
 					},
 					inAppPurchases: {
-						title: "Compras no App",
-						body: "Utilizamos o serviço terceirizado RevenueCat para gerenciar compras no app, que pode coletar dados sobre seu dispositivo e uso do aplicativo. Para mais informações sobre quais dados são coletados e como são utilizados, consulte a política de privacidade da RevenueCat.",
+						title: "Compras no Aplicativo",
+						body: "Utilizamos o serviço terceirizado RevenueCat para gerenciar compras no aplicativo, que pode coletar dados sobre seu dispositivo e uso do aplicativo. Para mais informações sobre quais dados são coletados e como são utilizados, consulte a política de privacidade da RevenueCat.",
 						button: "Política de Privacidade RevenueCat",
 					},
 					analytics: {
 						title: "Análises",
-						body: "{appName} utiliza o PostHog para análises, ajudando-nos a entender como os usuários interagem com o app e a melhorar a experiência. O PostHog coleta dados anônimos de uso, como aberturas do app, uso de recursos e relatórios de falhas. Esses dados nos ajudam a identificar pontos de melhoria e priorizar novas funcionalidades.",
+						body: "{appName} utiliza o PostHog para análises, ajudando-nos a entender como os usuários interagem com o aplicativo e a melhorar a experiência. O PostHog coleta dados anônimos de uso, como aberturas do aplicativo, uso de recursos e relatórios de falhas. Esses dados nos ajudam a identificar pontos de melhoria e priorizar novas funcionalidades.",
 						button: "Política de Privacidade PostHog",
 					},
 					contact: {
@@ -606,7 +606,7 @@ export const translations: Record<Locale, Translations> = {
 					{
 						icon: "Zap",
 						title: "Widgets Interativos",
-						description: "Controle fácil direto na tela inicial",
+						description: "Realize diversas ações do aplicativo direto da tela inicial",
 					},
 					{
 						icon: "Shield",

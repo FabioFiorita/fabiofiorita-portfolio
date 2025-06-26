@@ -16,6 +16,8 @@ export function AboutSkills() {
 		"Node",
 		"NestJS",
 		"Prisma",
+		"SwiftData",
+		"Core Data",
 		"Firebase",
 		"Supabase",
 		"Docker",

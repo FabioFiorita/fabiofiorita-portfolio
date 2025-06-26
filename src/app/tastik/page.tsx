@@ -50,7 +50,10 @@ export default function TastikPage() {
 					description={t("Apps.tastik.longDescription")}
 				/>
 
-				<QuickActions storeUrl="" privacyUrl="/tastik/privacy" />
+				<QuickActions
+					storeUrl="https://apps.apple.com/gb/app/tastik-tasks-and-lists/id6459197048"
+					privacyUrl="/tastik/privacy"
+				/>
 
 				<AppFeatures features={features} />
 
