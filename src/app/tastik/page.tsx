@@ -16,6 +16,7 @@ export default function TastikPage() {
 		"feature4",
 		"feature5",
 		"feature6",
+		"feature7",
 	].map((_, index) => {
 		const featureKey = `Apps.tastik.features.${index}`;
 		return {
