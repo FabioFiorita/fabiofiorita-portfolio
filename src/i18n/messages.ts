@@ -167,9 +167,9 @@ export const translations: Record<Locale, Translations> = {
 				title: "ItsMedTime",
 				category: "Health",
 				shortDescription:
-					"A user-friendly app that helps you track medications, manage schedules, and improve adherence for better health outcomes.",
+					"Everything you need to manage your meds, simply and smartly: track schedules, get important reminders, keep an eye on your history and stock, and stay on top of your health routine with ease.",
 				longDescription:
-					"A comprehensive medication management app that helps users track their prescriptions, set reminders, and maintain their health routine with seamless iCloud synchronization.",
+					"ItsMedTime makes medication management straightforward. Track every prescription, set reminders, and keep your routine running smoothly. The app monitors your intake and marks each dose as taken on time, late, or missed, so you always know how you’re doing. Plus, you’ll get notified when your supply is running low, so you’re never caught off guard. Everything syncs with iCloud for peace of mind, wherever you are.",
 				features: [
 					{
 						title: "Medication List",
@@ -425,9 +425,9 @@ export const translations: Record<Locale, Translations> = {
 				title: "MeuMedicamento",
 				category: "Saúde",
 				shortDescription:
-					"Um aplicativo fácil de usar que ajuda você a controlar medicamentos, gerenciar horários e melhorar a adesão para melhores resultados de saúde.",
+					"Tudo que você precisa pra cuidar dos seus remédios, de um jeito simples e inteligente: controle horários, receba alertas importantes, acompanhe seu histórico e estoque, e mantenha sua rotina de saúde sempre em dia.",
 				longDescription:
-					"Um aplicativo completo de gerenciamento de medicamentos que ajuda os usuários a rastrear suas prescrições, definir lembretes e manter sua rotina de saúde com sincronização perfeita do iCloud.",
+					"O MeuMedicamento deixa sua rotina de saúde mais fácil. Veja todos os seus medicamentos, doses e quantidades em uma tela só. Marque cada dose como tomada no horário, atrasada ou perdida, e acompanhe seu progresso sem complicação. Receba lembretes que funcionam até no silencioso, e saiba quando é hora de comprar mais. Com relatórios visuais e histórico completo, você tem o controle de verdade, sem mistério.",
 				features: [
 					{
 						title: "Lista de Medicamentos",
