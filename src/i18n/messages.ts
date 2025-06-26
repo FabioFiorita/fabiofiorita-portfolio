@@ -7,6 +7,8 @@ interface Translations {
 	Preferences: {
 		lightMode: string;
 		darkMode: string;
+		systemMode: string;
+		theme: string;
 	};
 	Navigation: {
 		general: string;
@@ -128,6 +130,8 @@ export const translations: Record<Locale, Translations> = {
 		Preferences: {
 			lightMode: "Light Mode",
 			darkMode: "Dark Mode",
+			systemMode: "System",
+			theme: "Theme",
 		},
 		Navigation: {
 			general: "General",
@@ -384,6 +388,8 @@ export const translations: Record<Locale, Translations> = {
 		Preferences: {
 			lightMode: "Modo Claro",
 			darkMode: "Modo Escuro",
+			systemMode: "Sistema",
+			theme: "Tema",
 		},
 		Navigation: {
 			general: "Geral",

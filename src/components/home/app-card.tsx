@@ -45,7 +45,7 @@ export function AppCard({
 						/>
 					</div>
 				)}
-				<div className="flex-1">
+				<div className="flex-1 flex flex-col justify-between min-h-52">
 					<CardHeader>
 						<div className="flex flex-col items-start lg:flex-row lg:items-center gap-2">
 							<CardTitle className="text-2xl">{title}</CardTitle>
