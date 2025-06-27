@@ -3,6 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import "./globals.css";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { cookies } from "next/headers";
 import { ThemeProvider } from "next-themes";
 import { AppSidebar } from "@/components/layout/app-sidebar";
@@ -54,6 +56,8 @@ export default async function RootLayout({
 						</SidebarProvider>
 					</ThemeProvider>
 				</NextIntlClientProvider>
+				<SpeedInsights />
+				<Analytics />
 			</body>
 		</html>
 	);
