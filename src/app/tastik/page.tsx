@@ -1,5 +1,6 @@
 "use client";
 
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { AppFeatures } from "@/components/app-page/app-features";
 import { AppHeader } from "@/components/app-page/app-header";
@@ -63,3 +64,9 @@ export default function TastikPage() {
 		</main>
 	);
 }
+
+export const metadata: Metadata = {
+	title: "Tastik",
+	description:
+		"Tastik is the flexible list app for everything that doesn't fit in your calendar. Make checklists, track numbers, manage budgets, and organize projects—all your way, all in one place.",
+};

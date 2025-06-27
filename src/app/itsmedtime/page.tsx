@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { AppFeatures } from "@/components/app-page/app-features";
 import { AppHeader } from "@/components/app-page/app-header";
@@ -59,3 +60,9 @@ export default function ItsMedTimePage() {
 		</main>
 	);
 }
+
+export const metadata: Metadata = {
+	title: "ItsMedTime",
+	description:
+		"Everything you need to manage your meds, simply and smartly: track schedules, get important reminders, keep an eye on your history and stock, and stay on top of your health routine with ease.",
+};
