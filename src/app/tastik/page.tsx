@@ -1,5 +1,3 @@
-"use client";
-
 import type { Metadata } from "next";
 import { useTranslations } from "next-intl";
 import { AppFeatures } from "@/components/app-page/app-features";
