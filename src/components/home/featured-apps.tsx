@@ -25,6 +25,7 @@ export function FeaturedApps() {
 			{appsData.map((app) => (
 				<AppCard
 					key={app.key}
+					id={app.key.toLowerCase()}
 					title={t(`Apps.${app.key}.title`)}
 					category={t(`Apps.${app.key}.category`)}
 					description={t(`Apps.${app.key}.shortDescription`)}
