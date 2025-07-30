@@ -14,7 +14,7 @@ export default function ItsMedTimePage() {
 	});
 
 	return (
-		<main className="p-8">
+		<main className="p-8" data-testid="itsmedtime-page">
 			<div className="flex flex-col justify-center items-center mb-8 gap-8 w-full">
 				<AppHeader
 					image="/itsmedtime.svg"

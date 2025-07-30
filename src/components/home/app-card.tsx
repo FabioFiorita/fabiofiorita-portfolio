@@ -32,7 +32,7 @@ export function AppCard({
 	const t = useTranslations();
 
 	return (
-		<Card>
+		<Card data-testid={`app-card-${title.toLowerCase()}`}>
 			<div className="flex justify-start items-start">
 				{image && (
 					<div className="flex items-start justify-center p-4">

@@ -35,7 +35,12 @@ export function LanguageSwitcher() {
 	return (
 		<DropdownMenu>
 			<DropdownMenuTrigger asChild>
-				<Button variant="outline" size="sm" className="w-full">
+				<Button
+					variant="outline"
+					size="sm"
+					className="w-full"
+					data-testid="language-switcher"
+				>
 					<Languages className="size-4" />
 					{currentLanguage?.label}
 				</Button>

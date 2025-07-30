@@ -24,7 +24,12 @@ export function ThemeToggle() {
 
 	if (!mounted) {
 		return (
-			<Button variant="ghost" size="sm" className="w-full justify-start gap-2">
+			<Button
+				variant="ghost"
+				size="sm"
+				className="w-full justify-start gap-2"
+				data-testid="theme-toggle"
+			>
 				<Sun className="size-4" />
 				<span>{t("Preferences.theme")}</span>
 			</Button>
@@ -53,6 +58,7 @@ export function ThemeToggle() {
 					variant="ghost"
 					size="sm"
 					className="w-full justify-start gap-2"
+					data-testid="theme-toggle"
 				>
 					{icon}
 					<span>{label}</span>

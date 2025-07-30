@@ -14,7 +14,7 @@ export default function TastikPage() {
 	});
 
 	return (
-		<main className="p-8">
+		<main className="p-8" data-testid="tastik-page">
 			<div className="flex flex-col justify-center items-center mb-8 gap-8 w-full">
 				<AppHeader
 					image="/tastik.svg"
