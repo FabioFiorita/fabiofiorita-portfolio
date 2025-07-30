@@ -1,8 +1,6 @@
 name: Run Playwright Tests
 
 on:
-  push:
-    branches: [main]
   pull_request:
     branches: [main]
 
@@ -23,7 +21,6 @@ jobs:
         with:
           version: 10
           run_install: false
-          cache: true
 
       - name: Install dependencies
         run: pnpm install
