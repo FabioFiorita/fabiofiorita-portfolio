@@ -25,7 +25,7 @@ export function DevelopmentApproach() {
 	];
 
 	return (
-		<div className="space-y-4">
+		<div className="space-y-4" data-testid="development-approach-card">
 			<div className="text-center">
 				<h2 className="text-2xl font-bold mb-2">
 					{t("DevelopmentApproach.title")}

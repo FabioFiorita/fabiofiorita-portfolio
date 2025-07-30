@@ -56,10 +56,20 @@ export function AppCard({
 					<CardContent>
 						<div className="flex gap-4 mt-4">
 							<Button size="sm" asChild>
-								<Link href={detailsUrl}>{t("Portfolio.viewDetails")}</Link>
+								<Link
+									data-testid={`app-card-${title.toLowerCase()}-see-details`}
+									href={detailsUrl}
+								>
+									{t("Portfolio.viewDetails")}
+								</Link>
 							</Button>
 							<Button size="sm" variant="outline" asChild>
-								<a href={appStoreUrl} target="_blank" rel="noopener noreferrer">
+								<a
+									href={appStoreUrl}
+									target="_blank"
+									rel="noopener noreferrer"
+									data-testid={`app-card-${title.toLowerCase()}-appstore`}
+								>
 									<ExternalLink className="size-4 mr-1" />
 									App Store
 								</a>
