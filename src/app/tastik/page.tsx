@@ -3,40 +3,15 @@ import { useTranslations } from "next-intl";
 import { AppFeatures } from "@/components/app-page/app-features";
 import { AppHeader } from "@/components/app-page/app-header";
 import { QuickActions } from "@/components/app-page/quick-actions";
-import { type TechIcon, TechStack } from "@/components/app-page/tech-stack";
+import { TechStack } from "@/components/app-page/tech-stack";
+import { useAppFeatures } from "@/hooks/use-app-features";
 
 export default function TastikPage() {
 	const t = useTranslations();
-
-	const features = [
-		"feature1",
-		"feature2",
-		"feature3",
-		"feature4",
-		"feature5",
-		"feature6",
-		"feature7",
-	].map((_, index) => {
-		const featureKey = `Apps.tastik.features.${index}`;
-		return {
-			title: t(`${featureKey}.title`),
-			description: t(`${featureKey}.description`),
-			imageSrc: t(`${featureKey}.imageSrc`),
-			imageAlt: t(`${featureKey}.imageAlt`),
-			reverse: t.raw(`${featureKey}.reverse`),
-		};
+	const { features, techFeatures } = useAppFeatures({
+		appKey: "tastik",
+		featureCount: 7,
 	});
-
-	const techFeatures = ["feature1", "feature2", "feature3", "feature4"].map(
-		(_, index) => {
-			const featureKey = `AppPage.techStack.features.${index}`;
-			return {
-				icon: t(`${featureKey}.icon`) as TechIcon,
-				title: t(`${featureKey}.title`),
-				description: t(`${featureKey}.description`),
-			};
-		},
-	);
 
 	return (
 		<main className="p-8">
