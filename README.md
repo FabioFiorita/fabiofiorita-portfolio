@@ -42,10 +42,9 @@ Tastik is the flexible list app for everything that doesn't fit in your calendar
 ## 🛠️ Tech Stack
 - **Frontend:** Next.js, React, TypeScript, Tailwind CSS
 - **i18n:** next-intl (English & Portuguese)
-- **UI:** Radix UI, custom components
-- **Testing:** Vitest, Testing Library
+- **UI:** Shadcn/ui, custom components
+- **Testing:** Vitest, Testing Library, Playwright
 - **Analytics:** Vercel Analytics, Speed Insights
-- **Other:** PostHog (for app analytics), RevenueCat (for in-app purchases)
 
 ## 🏗️ Project Structure
 ```
@@ -57,6 +56,7 @@ Tastik is the flexible list app for everything that doesn't fit in your calendar
   │   ├─ i18n/          # Internationalization (messages, logic)
   │   ├─ lib/           # Utilities and helpers
   │   └─ __tests__/     # Unit and integration tests
+  ├─ tests/             # Playwright E2E test files
   ├─ public/            # Static assets (images, icons)
   ├─ package.json       # Project metadata and scripts
   └─ ...
@@ -75,7 +75,11 @@ Tastik is the flexible list app for everything that doesn't fit in your calendar
    ```sh
    pnpm test
    ```
-4. **Build for production:**
+4. **Run e2e tests:**
+   ```sh
+   pnpm test:e2e
+   ```
+5. **Build for production:**
    ```sh
    pnpm build
    ```
