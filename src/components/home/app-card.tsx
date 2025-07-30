@@ -13,6 +13,7 @@ import {
 } from "@/components/ui/card";
 
 interface AppCardProps {
+	id: string;
 	title: string;
 	category: string;
 	description: string;
@@ -22,6 +23,7 @@ interface AppCardProps {
 }
 
 export function AppCard({
+	id,
 	title,
 	category,
 	description,
@@ -32,7 +34,7 @@ export function AppCard({
 	const t = useTranslations();
 
 	return (
-		<Card data-testid={`app-card-${title.toLowerCase()}`}>
+		<Card data-testid={`app-card-${id}`}>
 			<div className="flex justify-start items-start">
 				{image && (
 					<div className="flex items-start justify-center p-4">
@@ -48,16 +50,23 @@ export function AppCard({
 				<div className="flex-1 flex flex-col justify-between min-h-52">
 					<CardHeader>
 						<div className="flex flex-col items-start lg:flex-row lg:items-center gap-2">
-							<CardTitle className="text-2xl">{title}</CardTitle>
+							<CardTitle
+								className="text-2xl"
+								data-testid={`app-card-title-${id}`}
+							>
+								{title}
+							</CardTitle>
 							<Badge className="text-shadow-2xs">{category}</Badge>
 						</div>
-						<CardDescription>{description}</CardDescription>
+						<CardDescription data-testid={`app-card-description-${id}`}>
+							{description}
+						</CardDescription>
 					</CardHeader>
 					<CardContent>
 						<div className="flex gap-4 mt-4">
 							<Button size="sm" asChild>
 								<Link
-									data-testid={`app-card-${title.toLowerCase()}-see-details`}
+									data-testid={`app-card-${id}-see-details`}
 									href={detailsUrl}
 								>
 									{t("Portfolio.viewDetails")}
@@ -68,7 +77,7 @@ export function AppCard({
 									href={appStoreUrl}
 									target="_blank"
 									rel="noopener noreferrer"
-									data-testid={`app-card-${title.toLowerCase()}-appstore`}
+									data-testid={`app-card-${id}-appstore`}
 								>
 									<ExternalLink className="size-4 mr-1" />
 									App Store

@@ -1,4 +1,5 @@
 import { expect, test } from "@playwright/test";
+import { translations } from "../src/i18n/messages";
 
 test.describe("Homepage UI", () => {
 	test("homepage has correct title", async ({ page }) => {
@@ -76,4 +77,61 @@ test.describe("Homepage Navigation", () => {
 		await expect(newPage).toHaveURL(/apps\.apple\.com/);
 		await newPage.close();
 	});
+});
+
+test.describe("Homepage Text Content", () => {
+	const locales = ["en", "pt"] as const;
+
+	for (const locale of locales) {
+		test.describe(locale, () => {
+			const t = translations[locale];
+
+			test.beforeEach(async ({ page }) => {
+				await page.context().addCookies([
+					{
+						name: "locale",
+						value: locale,
+						domain: "localhost",
+						path: "/",
+					},
+				]);
+				await page.goto("/");
+			});
+
+			test("displays hero section text", async ({ page }) => {
+				await expect(
+					page.getByRole("heading", { name: t.Portfolio.welcome }),
+				).toBeVisible();
+				await expect(page.getByText(t.Portfolio.subtitle)).toBeVisible();
+			});
+
+			test("displays app card texts", async ({ page }) => {
+				// ItsMedTime
+				await expect(page.getByTestId("app-card-title-itsmedtime")).toHaveText(
+					t.Apps.itsMedTime.title,
+				);
+				await expect(
+					page.getByTestId("app-card-description-itsmedtime"),
+				).toHaveText(t.Apps.itsMedTime.shortDescription);
+
+				// Tastik
+				await expect(page.getByTestId("app-card-title-tastik")).toHaveText(
+					t.Apps.tastik.title,
+				);
+				await expect(
+					page.getByTestId("app-card-description-tastik"),
+				).toHaveText(t.Apps.tastik.shortDescription);
+			});
+
+			test("displays development approach text", async ({ page }) => {
+				const devCard = page.getByTestId("development-approach-card");
+				await expect(
+					devCard.getByText(t.DevelopmentApproach.title),
+				).toBeVisible();
+				await expect(
+					devCard.getByText(t.DevelopmentApproach.subtitle),
+				).toBeVisible();
+			});
+		});
+	}
 });
