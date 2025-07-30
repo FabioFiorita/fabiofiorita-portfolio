@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-test.describe("Homepage UI & Navigation", () => {
+test.describe("Homepage UI", () => {
 	test("homepage has correct title", async ({ page }) => {
 		await page.goto("/");
 		await expect(page).toHaveTitle(/Fábio Fiorita/);
@@ -22,7 +22,9 @@ test.describe("Homepage UI & Navigation", () => {
 		await page.goto("/");
 		await expect(page.getByTestId("development-approach-card")).toBeVisible();
 	});
+});
 
+test.describe("Homepage Navigation", () => {
 	test("about button navigates to about page", async ({ page }) => {
 		await page.goto("/");
 		await page.getByTestId("hero-about-link").click();
