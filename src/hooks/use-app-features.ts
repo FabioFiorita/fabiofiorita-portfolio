@@ -37,7 +37,7 @@ export function useAppFeatures({
 				description: t(`${featureKey}.description`),
 				imageSrc: t(`${featureKey}.imageSrc`),
 				imageAlt: t(`${featureKey}.imageAlt`),
-				reverse: t.raw(`${featureKey}.reverse`) === "true",
+				reverse: t.raw(`${featureKey}.reverse`) === true,
 			};
 		},
 	);
