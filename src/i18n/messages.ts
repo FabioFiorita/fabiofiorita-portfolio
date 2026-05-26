@@ -18,6 +18,7 @@ interface Translations {
 		itsmedtime: string;
 		tastik: string;
 		privacy: string;
+		support: string;
 	};
 	About: {
 		skills: string;
@@ -147,6 +148,104 @@ interface Translations {
 			}[];
 		};
 	};
+	TastikLanding: {
+		hero_badge: string;
+		hero_title_a: string;
+		hero_title_b: string;
+		hero_lead: string;
+		hero_cta_appstore: string;
+		hero_cta_privacy: string;
+		hero_chip_no_account: string;
+		hero_chip_icloud: string;
+		hero_chip_no_ads: string;
+		trust_no_account: string;
+		trust_no_ads: string;
+		trust_icloud: string;
+		trust_iphone: string;
+		shapes_eyebrow: string;
+		shapes_title: string;
+		shapes_lead: string;
+		shape_simple: string;
+		shape_simple_desc: string;
+		shape_stepper: string;
+		shape_stepper_desc: string;
+		shape_calc: string;
+		shape_calc_desc: string;
+		shape_kanban: string;
+		shape_kanban_desc: string;
+		shape_multi: string;
+		shape_multi_desc: string;
+		smart_eyebrow: string;
+		smart_title: string;
+		smart_lead: string;
+		smart_b1: string;
+		smart_b2: string;
+		smart_b3: string;
+		smart_b4: string;
+		smart_you_typed: string;
+		smart_input: string;
+		smart_result_label: string;
+		privacy_eyebrow: string;
+		privacy_title: string;
+		privacy_lead: string;
+		privacy_read_more: string;
+		privacy_chip_no_account: string;
+		privacy_chip_no_tracking: string;
+		privacy_chip_no_ads: string;
+		privacy_chip_no_selling: string;
+		privacy_chip_local: string;
+		privacy_chip_icloud: string;
+		tpl_eyebrow: string;
+		tpl_title: string;
+		tpl_lead: string;
+		tpl_items: string[];
+		widgets_eyebrow: string;
+		widgets_title: string;
+		widgets_lead: string;
+		widgets_b1: string;
+		widgets_b2: string;
+		widgets_b3: string;
+		widgets_b4: string;
+		widgets_home_screen: string;
+		details_eyebrow: string;
+		details_title: string;
+		d_tags: string;
+		d_notes: string;
+		d_search: string;
+		d_hide: string;
+		d_sort: string;
+		d_bulk: string;
+		d_md: string;
+		d_share: string;
+		d_archive: string;
+		d_custom: string;
+		pro_eyebrow: string;
+		pro_title: string;
+		pro_lead: string;
+		pro_free_heading: string;
+		pro_free_tag: string;
+		pro_free_desc: string;
+		pro_free_1: string;
+		pro_free_2: string;
+		pro_free_3: string;
+		pro_free_4: string;
+		pro_pro_heading: string;
+		pro_pro_tag: string;
+		pro_pro_desc: string;
+		pro_pro_1: string;
+		pro_pro_2: string;
+		pro_pro_3: string;
+		pro_pro_4: string;
+		pro_pro_5: string;
+		pro_pro_6: string;
+		pro_pro_7: string;
+		final_title: string;
+		final_lead: string;
+		final_support: string;
+		support_title: string;
+		support_lead_a: string;
+		support_cta: string;
+	};
 }
 
 export const translations: Record<Locale, Translations> = {
@@ -166,6 +265,7 @@ export const translations: Record<Locale, Translations> = {
 			itsmedtime: "ItsMedTime",
 			tastik: "Tastik",
 			privacy: "Privacy Policy",
+			support: "Support",
 		},
 		About: {
 			skills: "Skills",
@@ -474,6 +574,131 @@ export const translations: Record<Locale, Translations> = {
 				],
 			},
 		},
+		TastikLanding: {
+			hero_badge: "New · iOS app",
+			hero_title_a: "Tastik makes every list feel ",
+			hero_title_b: "made for the job.",
+			hero_lead:
+				"Create private, local-first lists with checkboxes, counters, totals, Kanban boards, mixed item types, tags, widgets, shortcuts, and Smart Add. No Tastik account required.",
+			hero_cta_appstore: "View on the App Store",
+			hero_cta_privacy: "Read the privacy policy",
+			hero_chip_no_account: "No account",
+			hero_chip_icloud: "Optional iCloud",
+			hero_chip_no_ads: "No ads",
+			trust_no_account: "No Tastik account",
+			trust_no_ads: "No ads. Ever.",
+			trust_icloud: "Optional iCloud sync",
+			trust_iphone: "Made for iPhone",
+			shapes_eyebrow: "Five list shapes",
+			shapes_title: "One app. Every kind of list.",
+			shapes_lead:
+				"Most list apps give you one tool. Tastik gives every list the right shape — so groceries feel like groceries, budgets feel like budgets, and projects move forward.",
+			shape_simple: "Simple",
+			shape_simple_desc:
+				"Tap to check items off. Great for packing lists, errands, and quick to-dos.",
+			shape_stepper: "Stepper",
+			shape_stepper_desc:
+				"Track quantities with plus and minus controls. Ideal for groceries and routines.",
+			shape_calc: "Calculator",
+			shape_calc_desc:
+				"Add and subtract values with a running total. Perfect for budgets, bills, and expenses.",
+			shape_kanban: "Kanban",
+			shape_kanban_desc:
+				"Move items through To Do, In Progress, and Done. Built for projects and pipelines.",
+			shape_multi: "Multi",
+			shape_multi_desc:
+				"Mix item types in one list. Keep links, counts, notes, tasks, and amounts side by side.",
+			smart_eyebrow: "Smart Add",
+			smart_title: "Turn a messy note into tidy items.",
+			smart_lead:
+				"On supported Apple Intelligence devices, Smart Add splits useful items out of natural language, preserves notes, matches existing tags, and keeps new Kanban items in To Do — so you can think out loud and ship a clean list.",
+			smart_b1: "Write naturally — Smart Add does the parsing",
+			smart_b2: "Preserves notes alongside extracted items",
+			smart_b3: "Matches your existing tags automatically",
+			smart_b4: "Always optional. Normal quick add stays put.",
+			smart_you_typed: "You typed",
+			smart_input:
+				"Plan trip — book flights, 2 nights in Lisbon, packing list (passport, charger, sunscreen), budget around $1200, remember to call landlord.",
+			smart_result_label: "Smart Add → Trip · Multi list",
+			privacy_eyebrow: "Local-first privacy",
+			privacy_title: "Your lists. On your device.",
+			privacy_lead:
+				"Tastik was designed to be private from the start. It does not require an account, does not ask you to sign in, and does not store list content on Tastik servers. Lists live locally on your device and can sync through your personal iCloud account when enabled.",
+			privacy_read_more: "Read the full privacy policy",
+			privacy_chip_no_account: "No account",
+			privacy_chip_no_tracking: "No tracking",
+			privacy_chip_no_ads: "No ads",
+			privacy_chip_no_selling: "No selling data",
+			privacy_chip_local: "Local-first",
+			privacy_chip_icloud: "Optional iCloud",
+			tpl_eyebrow: "Starter templates",
+			tpl_title: "Start fast. Customize everything.",
+			tpl_lead:
+				"Pick a practical template, then change anything: list type, icon, color, tags, and starter items. It's your list — Tastik just gives it a head start.",
+			tpl_items: [
+				"Weekly Groceries",
+				"Trip Packing",
+				"Workout Routine",
+				"Party Budget",
+				"Project Board",
+				"Reading Queue",
+				"Home Reset",
+				"Meal Prep",
+				"Monthly Bills",
+				"Launch Plan",
+				"Gift Ideas",
+				"Study Sprint",
+			],
+			widgets_eyebrow: "Widgets · Shortcuts · Control Center",
+			widgets_title: "Your lists, one tap away.",
+			widgets_lead:
+				"Keep important lists close with Home Screen and Lock Screen widgets. Open a list, jump straight to quick add, complete items, advance Kanban status, adjust stepper values, and use App Shortcuts for fast capture.",
+			widgets_b1: "App Shortcuts for fast capture",
+			widgets_b2: "Lock & Home Screen widgets",
+			widgets_b3: "Advance Kanban from widget",
+			widgets_b4: "Stepper adjust on widget",
+			widgets_home_screen: "Home Screen",
+			details_eyebrow: "Details for serious lists",
+			details_title: "Powerful when you need it. Quiet when you don't.",
+			d_tags: "Tags per list",
+			d_notes: "Notes and URLs on items",
+			d_search: "Search titles and notes",
+			d_hide: "Hide completed items",
+			d_sort: "Sort by date or name",
+			d_bulk: "Bulk selection actions",
+			d_md: "Markdown export (Pro)",
+			d_share: "Shared lists with CloudKit (Pro)",
+			d_archive: "Archive & recover lists",
+			d_custom: "Custom icons & colors (Pro)",
+			pro_eyebrow: "Tastik Pro",
+			pro_title: "One purchase. Yours forever.",
+			pro_lead:
+				"Tastik Pro unlocks all current and future Pro features with a one-time purchase. No subscription. Restore anytime.",
+			pro_free_heading: "Free",
+			pro_free_tag: "Get started",
+			pro_free_desc: "Everything you need to keep simple lists, free forever.",
+			pro_free_1: "3 active lists",
+			pro_free_2: "100 total items",
+			pro_free_3: "Simple and Stepper lists",
+			pro_free_4: "3 tags per list",
+			pro_pro_heading: "Tastik Pro",
+			pro_pro_tag: "One-time purchase",
+			pro_pro_desc: "No subscription · Restore anytime",
+			pro_pro_1: "Unlimited active lists",
+			pro_pro_2: "Unlimited items",
+			pro_pro_3: "Starter list templates",
+			pro_pro_4: "Calculator, Kanban, and Multi lists",
+			pro_pro_5: "Unlimited tags",
+			pro_pro_6: "Share and export lists",
+			pro_pro_7: "Custom icons and colors",
+			final_title: "Lists that fit the way you actually work.",
+			final_lead:
+				"Download Tastik on iPhone. No account, no setup screens — just open the app and start your first list.",
+			final_support: "Get support",
+			support_title: "Support",
+			support_lead_a: "Need help with Tastik? Send an email to ",
+			support_cta: "Email support",
+		},
 	},
 	pt: {
 		Owner: { title: "Desenvolvedor de Aplicativos" },
@@ -491,6 +716,7 @@ export const translations: Record<Locale, Translations> = {
 			itsmedtime: "MeuMedicamento",
 			tastik: "Tastik",
 			privacy: "Política de Privacidade",
+			support: "Suporte",
 		},
 		About: {
 			skills: "Habilidades",
@@ -800,6 +1026,132 @@ export const translations: Record<Locale, Translations> = {
 					},
 				],
 			},
+		},
+		TastikLanding: {
+			hero_badge: "Novo · App iOS",
+			hero_title_a: "O Tastik faz cada lista parecer ",
+			hero_title_b: "feita sob medida.",
+			hero_lead:
+				"Crie listas privadas e locais com caixas de seleção, contadores, totais, quadros Kanban, itens mistos, tags, widgets, atalhos e Smart Add. Não precisa de conta Tastik.",
+			hero_cta_appstore: "Ver na App Store",
+			hero_cta_privacy: "Leia a política de privacidade",
+			hero_chip_no_account: "Sem conta",
+			hero_chip_icloud: "iCloud opcional",
+			hero_chip_no_ads: "Sem anúncios",
+			trust_no_account: "Sem conta Tastik",
+			trust_no_ads: "Sem anúncios. Nunca.",
+			trust_icloud: "Sync iCloud opcional",
+			trust_iphone: "Feito para iPhone",
+			shapes_eyebrow: "Cinco formatos de lista",
+			shapes_title: "Um app. Todo tipo de lista.",
+			shapes_lead:
+				"A maioria dos apps de lista oferece uma só ferramenta. O Tastik dá a cada lista o formato certo — para que compras pareçam compras, orçamentos pareçam orçamentos e projetos andem.",
+			shape_simple: "Simples",
+			shape_simple_desc:
+				"Toque para marcar itens. Ótima para malas, recados e tarefas rápidas.",
+			shape_stepper: "Contador",
+			shape_stepper_desc:
+				"Acompanhe quantidades com botões de mais e menos. Ideal para compras e rotinas.",
+			shape_calc: "Calculadora",
+			shape_calc_desc:
+				"Some e subtraia valores com total dinâmico. Perfeito para orçamentos, contas e despesas.",
+			shape_kanban: "Kanban",
+			shape_kanban_desc:
+				"Mova itens entre A Fazer, Fazendo e Feito. Feito para projetos e pipelines.",
+			shape_multi: "Misto",
+			shape_multi_desc:
+				"Combine tipos de item em uma só lista. Links, contagens, notas, tarefas e valores lado a lado.",
+			smart_eyebrow: "Smart Add",
+			smart_title: "Transforme uma nota bagunçada em itens organizados.",
+			smart_lead:
+				"Em dispositivos compatíveis com Apple Intelligence, o Smart Add separa itens úteis de texto natural, mantém anotações, combina tags existentes e coloca novos cartões Kanban em A Fazer — pense em voz alta e entregue uma lista limpa.",
+			smart_b1: "Escreva naturalmente — o Smart Add interpreta",
+			smart_b2: "Preserva anotações junto aos itens extraídos",
+			smart_b3: "Combina automaticamente suas tags existentes",
+			smart_b4: "Sempre opcional. O adicionar rápido normal continua igual.",
+			smart_you_typed: "Você escreveu",
+			smart_input:
+				"Planejar viagem — comprar passagens, 2 noites em Lisboa, lista de mala (passaporte, carregador, protetor solar), orçamento de uns R$ 6000, lembrar de ligar para o síndico.",
+			smart_result_label: "Smart Add → Viagem · Lista Mista",
+			privacy_eyebrow: "Privacidade local-first",
+			privacy_title: "Suas listas. No seu dispositivo.",
+			privacy_lead:
+				"O Tastik foi pensado para ser privado desde o início. Não exige conta, não pede login e não guarda o conteúdo das suas listas em servidores Tastik. Elas ficam localmente no seu dispositivo e podem sincronizar pelo seu iCloud pessoal, quando ativado.",
+			privacy_read_more: "Leia a política de privacidade completa",
+			privacy_chip_no_account: "Sem conta",
+			privacy_chip_no_tracking: "Sem rastreamento",
+			privacy_chip_no_ads: "Sem anúncios",
+			privacy_chip_no_selling: "Sem venda de dados",
+			privacy_chip_local: "Local-first",
+			privacy_chip_icloud: "iCloud opcional",
+			tpl_eyebrow: "Modelos iniciais",
+			tpl_title: "Comece rápido. Personalize tudo.",
+			tpl_lead:
+				"Escolha um modelo prático e mude o que quiser: tipo de lista, ícone, cor, tags e itens iniciais. A lista é sua — o Tastik só dá o ponto de partida.",
+			tpl_items: [
+				"Compras da Semana",
+				"Mala de Viagem",
+				"Rotina de Treino",
+				"Orçamento da Festa",
+				"Quadro do Projeto",
+				"Fila de Leitura",
+				"Reset da Casa",
+				"Marmita da Semana",
+				"Contas Mensais",
+				"Plano de Lançamento",
+				"Ideias de Presente",
+				"Sprint de Estudos",
+			],
+			widgets_eyebrow: "Widgets · Atalhos · Central de Controle",
+			widgets_title: "Suas listas a um toque.",
+			widgets_lead:
+				"Mantenha listas importantes por perto com widgets na Tela de Início e Tela Bloqueada. Abra uma lista, vá direto para o adicionar rápido, conclua itens, avance status no Kanban, ajuste contadores e use Atalhos do App para capturas rápidas.",
+			widgets_b1: "Atalhos do App para captura rápida",
+			widgets_b2: "Widgets de Tela de Início e Bloqueada",
+			widgets_b3: "Avance o Kanban pelo widget",
+			widgets_b4: "Ajuste o contador pelo widget",
+			widgets_home_screen: "Tela de Início",
+			details_eyebrow: "Detalhes para listas sérias",
+			details_title: "Poderoso quando precisa. Silencioso quando não.",
+			d_tags: "Tags por lista",
+			d_notes: "Notas e URLs nos itens",
+			d_search: "Busca por título e notas",
+			d_hide: "Ocultar itens concluídos",
+			d_sort: "Ordenar por data ou nome",
+			d_bulk: "Ações em lote",
+			d_md: "Exportar em Markdown (Pro)",
+			d_share: "Listas compartilhadas via CloudKit (Pro)",
+			d_archive: "Arquivar e recuperar listas",
+			d_custom: "Ícones e cores personalizados (Pro)",
+			pro_eyebrow: "Tastik Pro",
+			pro_title: "Uma compra. Sua para sempre.",
+			pro_lead:
+				"O Tastik Pro libera todos os recursos Pro atuais e futuros com uma compra única. Sem assinatura. Restaure quando quiser.",
+			pro_free_heading: "Grátis",
+			pro_free_tag: "Comece já",
+			pro_free_desc:
+				"Tudo que você precisa para manter listas simples, de graça para sempre.",
+			pro_free_1: "3 listas ativas",
+			pro_free_2: "100 itens no total",
+			pro_free_3: "Listas Simples e Contador",
+			pro_free_4: "3 tags por lista",
+			pro_pro_heading: "Tastik Pro",
+			pro_pro_tag: "Compra única",
+			pro_pro_desc: "Sem assinatura · Restaure quando quiser",
+			pro_pro_1: "Listas ativas ilimitadas",
+			pro_pro_2: "Itens ilimitados",
+			pro_pro_3: "Modelos iniciais de lista",
+			pro_pro_4: "Listas Calculadora, Kanban e Mistas",
+			pro_pro_5: "Tags ilimitadas",
+			pro_pro_6: "Compartilhar e exportar listas",
+			pro_pro_7: "Ícones e cores personalizados",
+			final_title: "Listas que se encaixam no jeito que você trabalha.",
+			final_lead:
+				"Baixe o Tastik no iPhone. Sem conta, sem telas de configuração — basta abrir o app e começar sua primeira lista.",
+			final_support: "Obter suporte",
+			support_title: "Suporte",
+			support_lead_a: "Precisa de ajuda com o Tastik? Envie um e-mail para ",
+			support_cta: "Enviar e-mail",
 		},
 	},
 };

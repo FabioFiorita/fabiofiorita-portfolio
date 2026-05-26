@@ -16,7 +16,7 @@ export function FeaturedApps() {
 			detailsUrl: "/tastik",
 			appStoreUrl:
 				"https://apps.apple.com/gb/app/tastik-tasks-and-lists/id6459197048",
-			image: "/tastik.svg",
+			image: "/tastik.png",
 		},
 	];
 

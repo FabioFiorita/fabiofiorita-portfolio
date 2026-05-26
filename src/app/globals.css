@@ -112,6 +112,18 @@
 	--sidebar-ring: oklch(0.439 0 0);
 }
 
+.tastik-landing {
+	--tastik-primary: oklch(0.45 0.13 150);
+	--tastik-primary-soft: oklch(0.96 0.04 150);
+	--tastik-primary-deep: oklch(0.32 0.1 150);
+}
+
+.dark .tastik-landing {
+	--tastik-primary: oklch(0.72 0.16 150);
+	--tastik-primary-soft: oklch(0.27 0.05 150);
+	--tastik-primary-deep: oklch(0.85 0.1 150);
+}
+
 @layer base {
 	* {
 		@apply border-border outline-ring/50;
