@@ -86,6 +86,31 @@ interface Translations {
 				};
 			};
 		};
+		tastikPrivacy: {
+			badge: string;
+			title: string;
+			lastUpdated: string;
+			intro: {
+				p1: string;
+				p2: string;
+				p3: string;
+			};
+			sections: {
+				data: { title: string; p1: string; p2: string; p3: string };
+				account: { title: string; p1: string; p2: string };
+				icloud: { title: string; p1: string; p2: string; p3: string };
+				noCollect: {
+					title: string;
+					p1: string;
+					bullets: { b1: string; b2: string; b3: string; b4: string };
+				};
+				purchases: { title: string; p1: string; p2: string; p3: string };
+				diag: { title: string; p1: string; p2: string };
+				delete: { title: string; p1: string; p2: string; p3: string };
+				changes: { title: string; p1: string; p2: string };
+				contact: { title: string; intro: string; email: string };
+			};
+		};
 	};
 	Portfolio: {
 		welcome: string;
@@ -306,6 +331,73 @@ export const translations: Record<Locale, Translations> = {
 						title: "Contact",
 						body: "If you have any questions or suggestions about our privacy policy, please contact us at fabiolfp@gmail.com.",
 						button: "Contact Us",
+					},
+				},
+			},
+			tastikPrivacy: {
+				badge: "Privacy",
+				title: "Privacy Policy",
+				lastUpdated: "Last updated: May 26, 2026",
+				intro: {
+					p1: "If you opened this page, you probably care about your privacy.",
+					p2: "We do too.",
+					p3: "Tastik was designed to be a private, local-first app. Your lists are personal, and they should stay under your control. That is why Tastik does not require an account, does not ask you to sign in, and does not store your lists on our own servers.",
+				},
+				sections: {
+					data: {
+						title: "Your data",
+						p1: "Tastik stores your lists, items, tags, notes, quantities, amounts, and related app data locally on your device.",
+						p2: "If iCloud sync is enabled on your device, Tastik may sync your data through your personal iCloud account so your lists can be available across your Apple devices.",
+						p3: "We do not operate a Tastik server that stores your list content.",
+					},
+					account: {
+						title: "No account required",
+						p1: "Tastik does not require you to create an account.",
+						p2: "This means we do not collect your name, email address, password, or login credentials to use the app.",
+					},
+					icloud: {
+						title: "iCloud sync",
+						p1: "Tastik uses Apple's iCloud infrastructure to sync your data between your own devices.",
+						p2: "Your iCloud data is managed by Apple and tied to your Apple ID. Tastik does not have direct access to your Apple ID, iCloud account, or iCloud credentials.",
+						p3: "If you disable iCloud for Tastik, your data may remain only on your device.",
+					},
+					noCollect: {
+						title: "What Tastik does not collect",
+						p1: "Tastik does not collect, sell, rent, or share your personal list content.",
+						bullets: {
+							b1: "We do not use your lists for advertising.",
+							b2: "We do not read your lists.",
+							b3: "We do not track the items you create.",
+							b4: "We do not sell your data.",
+						},
+					},
+					purchases: {
+						title: "Purchases",
+						p1: "Tastik may offer Tastik Pro as a one-time purchase to unlock additional functionality.",
+						p2: "Purchases are processed by Apple through the App Store. Tastik does not receive, process, or store your full payment card information.",
+						p3: "Apple may provide Tastik with limited purchase-related entitlement information, such as whether Tastik Pro is active, restored, refunded, or revoked.",
+					},
+					diag: {
+						title: "Diagnostics and app performance",
+						p1: "Depending on your device settings, Apple may share crash reports or diagnostic information with developers to help improve app stability.",
+						p2: "These reports are used to fix bugs and improve Tastik. They are not used to identify you personally or inspect your list content.",
+					},
+					delete: {
+						title: "Data deletion",
+						p1: "Because Tastik is local-first, you control your data.",
+						p2: "You can delete lists or items directly inside the app.",
+						p3: "You can also remove Tastik data by deleting the app from your device. If iCloud sync is enabled, some synced data may remain in iCloud until removed through Apple's iCloud settings or by deleting the data from all synced devices.",
+					},
+					changes: {
+						title: "Changes to this policy",
+						p1: "We may update this Privacy Policy if Tastik's features or data handling change.",
+						p2: "If we make meaningful changes, we will update the policy inside the app.",
+					},
+					contact: {
+						title: "Contact",
+						intro:
+							"If you have questions about privacy or how Tastik handles data, contact us at",
+						email: "fabiolfp@gmail.com",
 					},
 				},
 			},
@@ -565,6 +657,73 @@ export const translations: Record<Locale, Translations> = {
 						title: "Contato",
 						body: "Se você tiver dúvidas ou sugestões sobre nossa política de privacidade, entre em contato pelo e-mail fabiolfp@gmail.com.",
 						button: "Fale Conosco",
+					},
+				},
+			},
+			tastikPrivacy: {
+				badge: "Privacidade",
+				title: "Política de Privacidade",
+				lastUpdated: "Atualizado em: 26 de maio de 2026",
+				intro: {
+					p1: "Se você abriu esta página, provavelmente se importa com a sua privacidade.",
+					p2: "Nós também.",
+					p3: "O Tastik foi pensado para ser um app privado e local-first. Suas listas são pessoais, e devem permanecer sob seu controle. Por isso o Tastik não exige conta, não pede login e não armazena suas listas em servidores próprios.",
+				},
+				sections: {
+					data: {
+						title: "Seus dados",
+						p1: "O Tastik guarda suas listas, itens, tags, notas, quantidades, valores e dados relacionados localmente no seu dispositivo.",
+						p2: "Se a sincronização do iCloud estiver ativa no seu dispositivo, o Tastik pode sincronizar seus dados pela sua conta iCloud pessoal, para que as listas fiquem disponíveis nos seus dispositivos Apple.",
+						p3: "Não operamos um servidor Tastik que armazene o conteúdo das suas listas.",
+					},
+					account: {
+						title: "Sem necessidade de conta",
+						p1: "O Tastik não exige a criação de conta.",
+						p2: "Isso significa que não coletamos seu nome, e-mail, senha ou credenciais de login para usar o app.",
+					},
+					icloud: {
+						title: "Sincronização iCloud",
+						p1: "O Tastik usa a infraestrutura iCloud da Apple para sincronizar seus dados entre seus próprios dispositivos.",
+						p2: "Seus dados no iCloud são gerenciados pela Apple e vinculados ao seu Apple ID. O Tastik não tem acesso direto ao seu Apple ID, conta iCloud ou credenciais do iCloud.",
+						p3: "Se você desativar o iCloud para o Tastik, seus dados podem ficar apenas no seu dispositivo.",
+					},
+					noCollect: {
+						title: "O que o Tastik não coleta",
+						p1: "O Tastik não coleta, vende, aluga nem compartilha o conteúdo pessoal das suas listas.",
+						bullets: {
+							b1: "Não usamos suas listas para publicidade.",
+							b2: "Não lemos suas listas.",
+							b3: "Não rastreamos os itens que você cria.",
+							b4: "Não vendemos seus dados.",
+						},
+					},
+					purchases: {
+						title: "Compras",
+						p1: "O Tastik pode oferecer o Tastik Pro como compra única para liberar funcionalidades adicionais.",
+						p2: "As compras são processadas pela Apple via App Store. O Tastik não recebe, processa nem armazena os dados completos do seu cartão.",
+						p3: "A Apple pode fornecer ao Tastik informações limitadas de habilitação de compra, como se o Tastik Pro está ativo, restaurado, reembolsado ou revogado.",
+					},
+					diag: {
+						title: "Diagnóstico e desempenho",
+						p1: "Dependendo das configurações do seu dispositivo, a Apple pode compartilhar relatórios de falha ou diagnóstico com desenvolvedores para ajudar a melhorar a estabilidade.",
+						p2: "Esses relatórios são usados para corrigir bugs e melhorar o Tastik. Não são usados para identificar você nem para inspecionar o conteúdo das suas listas.",
+					},
+					delete: {
+						title: "Exclusão de dados",
+						p1: "Como o Tastik é local-first, você controla seus dados.",
+						p2: "Você pode excluir listas ou itens direto no app.",
+						p3: "Você também pode remover os dados do Tastik apagando o app do dispositivo. Se a sincronização iCloud estiver ativa, alguns dados sincronizados podem permanecer no iCloud até serem removidos pelas configurações da Apple ou pela exclusão dos dados em todos os dispositivos sincronizados.",
+					},
+					changes: {
+						title: "Alterações nesta política",
+						p1: "Podemos atualizar esta Política de Privacidade se os recursos ou o tratamento de dados do Tastik mudarem.",
+						p2: "Quando fizermos mudanças relevantes, atualizaremos a política dentro do app.",
+					},
+					contact: {
+						title: "Contato",
+						intro:
+							"Se tiver dúvidas sobre privacidade ou como o Tastik trata os dados, escreva para",
+						email: "fabiolfp@gmail.com",
 					},
 				},
 			},
