@@ -1,4 +1,4 @@
-import { Home, ListCheck, Mail, Pill, Shield, Store, User } from "lucide-react";
+import { Home } from "lucide-react";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import {
@@ -17,9 +17,9 @@ import {
 	SidebarMenuSubItem,
 	SidebarRail,
 } from "@/components/ui/sidebar";
+import { usePortfolioData } from "@/hooks/use-portfolio-data";
 import { LanguageSwitcher } from "./language-switcher";
 import { ThemeToggle } from "./theme-toggle";
-import { usePortfolioData } from "@/hooks/use-portfolio-data";
 
 export function AppSidebar() {
 	const t = useTranslations();

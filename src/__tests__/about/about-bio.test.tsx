@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import type { ComponentProps } from "react";
 import { afterEach, describe, expect, test, vi } from "vitest";
 import { AboutBio } from "@/components/about/about-bio";
 
@@ -12,7 +13,7 @@ vi.mock("next/image", () => ({
 	__esModule: true,
 	// biome-ignore lint/a11y/useAltText: <It is used as a mock>
 	// biome-ignore lint/performance/noImgElement: <It is used as a mock>
-	default: (props: any) => <img {...props} />,
+	default: (props: ComponentProps<"img">) => <img {...props} />,
 }));
 
 const mockTranslations: Record<string, string> = {
