@@ -1,4 +1,4 @@
-import { Home, ListCheck, Mail, Pill, Shield, Store, User } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import {
@@ -17,9 +17,9 @@ import {
 	SidebarMenuSubItem,
 	SidebarRail,
 } from "@/components/ui/sidebar";
+import { usePortfolioData } from "@/hooks/use-portfolio-data";
 import { LanguageSwitcher } from "./language-switcher";
 import { ThemeToggle } from "./theme-toggle";
-import { usePortfolioData } from "@/hooks/use-portfolio-data";
 
 export function AppSidebar() {
 	const t = useTranslations();
@@ -32,9 +32,14 @@ export function AppSidebar() {
 					<SidebarMenuItem>
 						<SidebarMenuButton size="lg" asChild>
 							<Link href="/" className="font-semibold">
-								<div className="flex aspect-square size-8 items-center justify-center rounded-lg bg-sidebar-primary text-sidebar-primary-foreground">
-									<Home className="size-4" />
-								</div>
+								<Image
+									src="/app-portfolio-mark.svg"
+									alt=""
+									width={32}
+									height={32}
+									className="size-8 shrink-0 rounded-lg"
+									priority
+								/>
 								<div className="flex flex-col gap-0.5 leading-none">
 									<span className="font-semibold">
 										{portfolioData.owner.name}
