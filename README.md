@@ -22,16 +22,16 @@ Everything you need to manage your meds, simply and smartly: track schedules, ge
 ### [Tastik](https://apps.apple.com/gb/app/tastik-tasks-and-lists/id6459197048)
 **Category:** Productivity
 
-Tastik is the flexible list app for everything that doesn't fit in your calendar. Make checklists, track numbers, manage budgets, and organize projects—all your way, all in one place.
+Tastik is a private, local-first list app for everything that doesn't fit in your calendar. It gives every list the shape it needs—checklists, counters, budgets, Kanban boards, or a mix—with no account required and your data kept on-device, with optional iCloud sync.
 
 **Key Features:**
-- All Your Lists in One Place: Projects, shopping, personal goals, and more—always organized and easy to find.
-- Simple Checklists: Classic to-do lists for anything, with progress tracking.
-- Track Quantities Fast: Adjust numbers on the fly for groceries, supplies, or inventory.
+- Five List Shapes: Simple checklists, steppers for quantities, calculator lists with running totals, Kanban boards, and mixed multi-type lists.
+- Smart Add: Turn natural language into tidy items, with notes preserved and existing tags matched automatically.
+- Local-First Privacy: No account, no tracking, no ads—lists live on your device and sync only through your personal iCloud when enabled.
 - Budgets Made Easy: Track spending, savings, and expenses with clear numbers and categories.
 - Kanban Progress: Organize tasks into To Do, Doing, and Done.
-- Mix Lists, Your Way: Combine checklists, numbers, notes, and more.
-- Lists Always Handy: Check off or update your lists straight from your home screen with interactive widgets.
+- Tags, Notes & Search: Organize and find items across every list.
+- Widgets & Shortcuts: Check off or update lists from the Home and Lock Screen, and capture fast with App Shortcuts.
 
 ## 💡 Development Philosophy
 - **iOS-First:** Native iOS apps using Swift, SwiftUI, and SwiftData, following Apple’s best practices.
