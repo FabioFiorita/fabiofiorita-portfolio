@@ -1,4 +1,3 @@
-import { Shield } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { Card, CardContent } from "@/components/ui/card";
 
@@ -8,10 +7,6 @@ export function TastikPrivacyPolicy() {
 	return (
 		<div className="max-w-4xl mx-auto space-y-6">
 			<div className="text-center space-y-3">
-				<div className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-3 py-1 text-xs font-medium text-muted-foreground">
-					<Shield className="size-3.5 text-primary" />
-					{t("badge")}
-				</div>
 				<h1 className="text-3xl font-bold">{t("title")}</h1>
 			</div>
 

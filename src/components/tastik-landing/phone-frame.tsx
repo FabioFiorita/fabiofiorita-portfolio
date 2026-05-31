@@ -11,7 +11,7 @@ export function PhoneFrame({
 	return (
 		<div
 			className={cn(
-				"relative mx-auto aspect-[9/19.5] w-full max-w-[280px]",
+				"relative mx-auto aspect-[1430/2959] w-full max-w-[280px]",
 				className,
 			)}
 		>

@@ -62,11 +62,7 @@ function Hero() {
 		<section className="relative overflow-hidden bg-gradient-to-b from-background to-[var(--tastik-primary-soft)]/40">
 			<div className="mx-auto grid max-w-6xl gap-12 px-5 pb-20 pt-14 md:grid-cols-2 md:gap-8 md:pb-28 md:pt-20">
 				<div className="flex flex-col justify-center">
-					<span className="inline-flex w-fit items-center gap-1.5 rounded-full border border-border bg-card/70 px-3 py-1 text-[11.5px] font-medium text-muted-foreground backdrop-blur">
-						<span className="h-1.5 w-1.5 rounded-full bg-[var(--tastik-primary)]" />
-						{t("hero_badge")}
-					</span>
-					<h1 className="mt-5 text-balance text-[40px] font-bold leading-[1.05] tracking-tight sm:text-[52px] md:text-[60px]">
+					<h1 className="text-balance text-[40px] font-bold leading-[1.05] tracking-tight sm:text-[52px] md:text-[60px]">
 						{t("hero_title_a")}
 						<span className="text-[var(--tastik-primary)]">
 							{t("hero_title_b")}
@@ -115,13 +111,13 @@ function Hero() {
 					<div className="absolute -left-4 bottom-8 hidden w-[220px] rotate-[-4deg] sm:block md:-left-6">
 						<div className="rounded-2xl bg-[var(--tastik-primary)] p-3 text-white shadow-xl">
 							<div className="text-[10.5px] font-semibold uppercase tracking-wider opacity-80">
-								Monthly Bills
+								{t("hero_card_bills_title")}
 							</div>
 							<div className="mt-1 text-[22px] font-bold tracking-tight">
-								$1,824
+								{t("hero_card_bills_amount")}
 							</div>
 							<div className="text-[10.5px] opacity-80">
-								Running total · 8 entries
+								{t("hero_card_bills_sub")}
 							</div>
 							<div className="mt-2 h-1.5 w-full overflow-hidden rounded-full bg-white/20">
 								<div className="h-full w-3/5 rounded-full bg-white/80" />
@@ -133,23 +129,21 @@ function Hero() {
 							<div className="flex items-center gap-2">
 								<Sparkles className="h-3.5 w-3.5 text-[var(--tastik-primary)]" />
 								<div className="text-[10.5px] font-semibold uppercase tracking-wider text-muted-foreground">
-									Smart Add
+									{t("hero_card_smart_title")}
 								</div>
 							</div>
 							<p className="mt-1.5 text-[12px] leading-snug text-foreground">
-								avocados, sourdough, 2 greek yogurts, cold brew x3
+								{t("hero_card_smart_input")}
 							</p>
 							<div className="mt-2 flex flex-wrap gap-1">
-								{["Avocados", "Sourdough", "Yogurt ×2", "Cold brew ×3"].map(
-									(tag) => (
-										<span
-											key={tag}
-											className="rounded-full bg-[var(--tastik-primary-soft)] px-2 py-0.5 text-[10px] font-medium text-[var(--tastik-primary-deep)]"
-										>
-											{tag}
-										</span>
-									),
-								)}
+								{(t.raw("hero_card_smart_tags") as string[]).map((tag) => (
+									<span
+										key={tag}
+										className="rounded-full bg-[var(--tastik-primary-soft)] px-2 py-0.5 text-[10px] font-medium text-[var(--tastik-primary-deep)]"
+									>
+										{tag}
+									</span>
+								))}
 							</div>
 						</div>
 					</div>
@@ -266,19 +260,21 @@ function ListShapes() {
 
 function SmartAdd() {
 	const t = useTranslations("TastikLanding");
-	const items: {
-		label: string;
-		kind: "task" | "note" | "pack";
-		total?: string;
-	}[] = [
-		{ label: "Book flights", kind: "task" },
-		{ label: "2 nights in Lisbon", kind: "note" },
-		{ label: "Passport", kind: "pack" },
-		{ label: "Charger", kind: "pack" },
-		{ label: "Sunscreen", kind: "pack" },
-		{ label: "Budget", kind: "task", total: "$1,200" },
-		{ label: "Call landlord", kind: "task" },
+	const labels = t.raw("smart_items") as string[];
+	const kinds: ("task" | "note" | "pack")[] = [
+		"task",
+		"note",
+		"pack",
+		"pack",
+		"pack",
+		"task",
+		"task",
 	];
+	const items = labels.map((label, i) => ({
+		label,
+		kind: kinds[i],
+		total: i === 5 ? t("smart_budget_total") : undefined,
+	}));
 	return (
 		<section className="border-y border-border/60 bg-muted/30">
 			<div className="mx-auto grid max-w-6xl gap-12 px-5 py-20 md:grid-cols-2 md:items-center md:py-28">
@@ -322,11 +318,11 @@ function SmartAdd() {
 								>
 									{it.total ? (
 										<span className="text-[10px] font-semibold uppercase tracking-wider text-foreground">
-											Total
+											{t("smart_total_label")}
 										</span>
 									) : it.kind === "note" ? (
 										<span className="text-[10px] font-semibold uppercase tracking-wider text-muted-foreground">
-											Note
+											{t("smart_note_label")}
 										</span>
 									) : (
 										<div className="h-4 w-4 rounded-full border-2 border-border" />
@@ -461,9 +457,18 @@ function WidgetsShortcuts() {
 							<WidgetPreview />
 						</div>
 						<div className="mt-4 grid grid-cols-3 gap-3">
-							<SmallWidget label="Trip Packing" sub="5 of 12" />
-							<SmallWidget label="Project Board" sub="3 doing" />
-							<SmallWidget label="Gift Ideas" sub="8 saved" />
+							<SmallWidget
+								label={t("widget_pack_title")}
+								sub={t("widget_pack_sub")}
+							/>
+							<SmallWidget
+								label={t("widget_board_title")}
+								sub={t("widget_board_sub")}
+							/>
+							<SmallWidget
+								label={t("widget_gift_title")}
+								sub={t("widget_gift_sub")}
+							/>
 						</div>
 					</div>
 				</div>

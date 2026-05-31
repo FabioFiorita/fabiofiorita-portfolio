@@ -149,7 +149,6 @@ interface Translations {
 		};
 	};
 	TastikLanding: {
-		hero_badge: string;
 		hero_title_a: string;
 		hero_title_b: string;
 		hero_lead: string;
@@ -158,6 +157,12 @@ interface Translations {
 		hero_chip_no_account: string;
 		hero_chip_icloud: string;
 		hero_chip_no_ads: string;
+		hero_card_bills_title: string;
+		hero_card_bills_amount: string;
+		hero_card_bills_sub: string;
+		hero_card_smart_title: string;
+		hero_card_smart_input: string;
+		hero_card_smart_tags: string[];
 		trust_no_account: string;
 		trust_no_ads: string;
 		trust_icloud: string;
@@ -185,6 +190,10 @@ interface Translations {
 		smart_you_typed: string;
 		smart_input: string;
 		smart_result_label: string;
+		smart_total_label: string;
+		smart_note_label: string;
+		smart_items: string[];
+		smart_budget_total: string;
 		privacy_eyebrow: string;
 		privacy_title: string;
 		privacy_lead: string;
@@ -207,6 +216,14 @@ interface Translations {
 		widgets_b3: string;
 		widgets_b4: string;
 		widgets_home_screen: string;
+		widget_preview_title: string;
+		widget_preview_items: string[];
+		widget_pack_title: string;
+		widget_pack_sub: string;
+		widget_board_title: string;
+		widget_board_sub: string;
+		widget_gift_title: string;
+		widget_gift_sub: string;
 		details_eyebrow: string;
 		details_title: string;
 		d_tags: string;
@@ -279,7 +296,7 @@ export const translations: Record<Locale, Translations> = {
 			tastik:
 				"In 2023, I launched Tastik, an app dedicated to organizing daily tasks and lists — from shopping and quick expenses to recurring notes. The idea came from the absence of a simple yet versatile app that could consolidate various types of customized lists in one convenient place.",
 			technology:
-				"I build all my applications exclusively for iOS using Swift, SwiftUI, and SwiftData, always incorporating the latest Apple technologies. My goal is to deliver modern, private, and user-friendly experiences — always attentive to user feedback and continuously improving with every update.",
+				"I build all my applications exclusively for iOS using Swift, SwiftUI, and a local-first SQLite data layer with iCloud sync, always incorporating the latest Apple technologies. My goal is to deliver modern, private, and user-friendly experiences — always attentive to user feedback and continuously improving with every update.",
 			focusAreasList: {
 				iOS: "iOS Development",
 				frontend: "Frontend Development",
@@ -526,7 +543,7 @@ export const translations: Record<Locale, Translations> = {
 				modern: {
 					title: "Modern iOS Features",
 					description:
-						"Leveraging iOS capabilities including interactive widgets, SwiftData, and iCloud synchronization.",
+						"Leveraging iOS capabilities including interactive widgets, local-first SQLite storage, and iCloud synchronization.",
 				},
 				userCentered: {
 					title: "User-Centered Experience",
@@ -575,16 +592,27 @@ export const translations: Record<Locale, Translations> = {
 			},
 		},
 		TastikLanding: {
-			hero_badge: "New · iOS app",
 			hero_title_a: "Tastik makes every list feel ",
 			hero_title_b: "made for the job.",
 			hero_lead:
-				"Create private, local-first lists with checkboxes, counters, totals, Kanban boards, mixed item types, tags, widgets, shortcuts, and Smart Add. No Tastik account required.",
+				"Create private, local-first lists with checkboxes, counters, totals, Kanban boards, mixed item types, tags, widgets, shortcuts, and Smart Add. No account required.",
 			hero_cta_appstore: "View on the App Store",
 			hero_cta_privacy: "Read the privacy policy",
 			hero_chip_no_account: "No account",
 			hero_chip_icloud: "Optional iCloud",
 			hero_chip_no_ads: "No ads",
+			hero_card_bills_title: "Monthly Bills",
+			hero_card_bills_amount: "$1,824",
+			hero_card_bills_sub: "Running total · 8 entries",
+			hero_card_smart_title: "Smart Add",
+			hero_card_smart_input:
+				"avocados, sourdough, 2 greek yogurts, cold brew x3",
+			hero_card_smart_tags: [
+				"Avocados",
+				"Sourdough",
+				"Yogurt ×2",
+				"Cold brew ×3",
+			],
 			trust_no_account: "No Tastik account",
 			trust_no_ads: "No ads. Ever.",
 			trust_icloud: "Optional iCloud sync",
@@ -620,6 +648,18 @@ export const translations: Record<Locale, Translations> = {
 			smart_input:
 				"Plan trip — book flights, 2 nights in Lisbon, packing list (passport, charger, sunscreen), budget around $1200, remember to call landlord.",
 			smart_result_label: "Smart Add → Trip · Multi list",
+			smart_total_label: "Total",
+			smart_note_label: "Note",
+			smart_items: [
+				"Book flights",
+				"2 nights in Lisbon",
+				"Passport",
+				"Charger",
+				"Sunscreen",
+				"Budget",
+				"Call landlord",
+			],
+			smart_budget_total: "$1,200",
 			privacy_eyebrow: "Local-first privacy",
 			privacy_title: "Your lists. On your device.",
 			privacy_lead:
@@ -658,6 +698,19 @@ export const translations: Record<Locale, Translations> = {
 			widgets_b3: "Advance Kanban from widget",
 			widgets_b4: "Stepper adjust on widget",
 			widgets_home_screen: "Home Screen",
+			widget_preview_title: "Weekly Groceries",
+			widget_preview_items: [
+				"Avocados",
+				"Sourdough",
+				"Greek yogurt",
+				"Cold brew",
+			],
+			widget_pack_title: "Trip Packing",
+			widget_pack_sub: "5 of 12",
+			widget_board_title: "Project Board",
+			widget_board_sub: "3 doing",
+			widget_gift_title: "Gift Ideas",
+			widget_gift_sub: "8 saved",
 			details_eyebrow: "Details for serious lists",
 			details_title: "Powerful when you need it. Quiet when you don't.",
 			d_tags: "Tags per list",
@@ -666,7 +719,7 @@ export const translations: Record<Locale, Translations> = {
 			d_hide: "Hide completed items",
 			d_sort: "Sort by date or name",
 			d_bulk: "Bulk selection actions",
-			d_md: "Markdown export (Pro)",
+			d_md: "Export (Pro)",
 			d_share: "Shared lists with CloudKit (Pro)",
 			d_archive: "Archive & recover lists",
 			d_custom: "Custom icons & colors (Pro)",
@@ -730,7 +783,7 @@ export const translations: Record<Locale, Translations> = {
 			tastik:
 				"Em 2023, lancei também o Tastik, um aplicativo focado em organizar tarefas e listas diárias — como compras, gastos rápidos ou anotações recorrentes. A ideia surgiu da falta de um aplicativo simples e versátil, capaz de reunir diferentes tipos de listas personalizadas em um só lugar.",
 			technology:
-				"Desenvolvo todos os meus aplicativos exclusivamente para iOS, com Swift, SwiftUI e SwiftData, usando sempre as tecnologias mais recentes da Apple. Meu foco é entregar experiências modernas, privadas e intuitivas — sempre ouvindo os usuários e aprimorando a cada versão.",
+				"Desenvolvo todos os meus aplicativos exclusivamente para iOS, com Swift, SwiftUI e uma camada de dados local com SQLite e sincronização via iCloud, usando sempre as tecnologias mais recentes da Apple. Meu foco é entregar experiências modernas, privadas e intuitivas — sempre ouvindo os usuários e aprimorando a cada versão.",
 			focusAreasList: {
 				iOS: "Desenvolvimento iOS",
 				frontend: "Desenvolvimento Frontend",
@@ -979,7 +1032,7 @@ export const translations: Record<Locale, Translations> = {
 				modern: {
 					title: "Recursos Modernos do iOS",
 					description:
-						"Aproveitando recursos do iOS, incluindo widgets interativos, SwiftData e sincronização iCloud.",
+						"Aproveitando recursos do iOS, incluindo widgets interativos, armazenamento local com SQLite e sincronização iCloud.",
 				},
 				userCentered: {
 					title: "Experiência Centrada no Usuário",
@@ -1028,16 +1081,21 @@ export const translations: Record<Locale, Translations> = {
 			},
 		},
 		TastikLanding: {
-			hero_badge: "Novo · App iOS",
 			hero_title_a: "O Tastik faz cada lista parecer ",
 			hero_title_b: "feita sob medida.",
 			hero_lead:
-				"Crie listas privadas e locais com caixas de seleção, contadores, totais, quadros Kanban, itens mistos, tags, widgets, atalhos e Smart Add. Não precisa de conta Tastik.",
+				"Crie listas privadas e locais com caixas de seleção, contadores, totais, quadros Kanban, itens mistos, tags, widgets, atalhos e Smart Add. Não precisa de conta.",
 			hero_cta_appstore: "Ver na App Store",
 			hero_cta_privacy: "Leia a política de privacidade",
 			hero_chip_no_account: "Sem conta",
 			hero_chip_icloud: "iCloud opcional",
 			hero_chip_no_ads: "Sem anúncios",
+			hero_card_bills_title: "Contas Mensais",
+			hero_card_bills_amount: "R$ 1.824",
+			hero_card_bills_sub: "Total dinâmico · 8 itens",
+			hero_card_smart_title: "Smart Add",
+			hero_card_smart_input: "abacates, pão, 2 iogurtes gregos, café gelado x3",
+			hero_card_smart_tags: ["Abacates", "Pão", "Iogurte ×2", "Café gelado ×3"],
 			trust_no_account: "Sem conta Tastik",
 			trust_no_ads: "Sem anúncios. Nunca.",
 			trust_icloud: "Sync iCloud opcional",
@@ -1073,6 +1131,18 @@ export const translations: Record<Locale, Translations> = {
 			smart_input:
 				"Planejar viagem — comprar passagens, 2 noites em Lisboa, lista de mala (passaporte, carregador, protetor solar), orçamento de uns R$ 6000, lembrar de ligar para o síndico.",
 			smart_result_label: "Smart Add → Viagem · Lista Mista",
+			smart_total_label: "Total",
+			smart_note_label: "Nota",
+			smart_items: [
+				"Comprar passagens",
+				"2 noites em Lisboa",
+				"Passaporte",
+				"Carregador",
+				"Protetor solar",
+				"Orçamento",
+				"Ligar para o síndico",
+			],
+			smart_budget_total: "R$ 6.000",
 			privacy_eyebrow: "Privacidade local-first",
 			privacy_title: "Suas listas. No seu dispositivo.",
 			privacy_lead:
@@ -1111,6 +1181,14 @@ export const translations: Record<Locale, Translations> = {
 			widgets_b3: "Avance o Kanban pelo widget",
 			widgets_b4: "Ajuste o contador pelo widget",
 			widgets_home_screen: "Tela de Início",
+			widget_preview_title: "Compras da Semana",
+			widget_preview_items: ["Abacates", "Pão", "Iogurte grego", "Café gelado"],
+			widget_pack_title: "Mala de Viagem",
+			widget_pack_sub: "5 de 12",
+			widget_board_title: "Quadro do Projeto",
+			widget_board_sub: "3 fazendo",
+			widget_gift_title: "Ideias de Presente",
+			widget_gift_sub: "8 salvos",
 			details_eyebrow: "Detalhes para listas sérias",
 			details_title: "Poderoso quando precisa. Silencioso quando não.",
 			d_tags: "Tags por lista",
@@ -1119,7 +1197,7 @@ export const translations: Record<Locale, Translations> = {
 			d_hide: "Ocultar itens concluídos",
 			d_sort: "Ordenar por data ou nome",
 			d_bulk: "Ações em lote",
-			d_md: "Exportar em Markdown (Pro)",
+			d_md: "Exportar (Pro)",
 			d_share: "Listas compartilhadas via CloudKit (Pro)",
 			d_archive: "Arquivar e recuperar listas",
 			d_custom: "Ícones e cores personalizados (Pro)",
@@ -1141,7 +1219,7 @@ export const translations: Record<Locale, Translations> = {
 			pro_pro_1: "Listas ativas ilimitadas",
 			pro_pro_2: "Itens ilimitados",
 			pro_pro_3: "Modelos iniciais de lista",
-			pro_pro_4: "Listas Calculadora, Kanban e Mistas",
+			pro_pro_4: "Calculadora, Kanban e Mista",
 			pro_pro_5: "Tags ilimitadas",
 			pro_pro_6: "Compartilhar e exportar listas",
 			pro_pro_7: "Ícones e cores personalizados",

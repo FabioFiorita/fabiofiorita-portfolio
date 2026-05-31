@@ -18,6 +18,8 @@ export function AboutSkills() {
 		"Prisma",
 		"SwiftData",
 		"Core Data",
+		"SQLite",
+		"SQLiteData",
 		"Firebase",
 		"Supabase",
 		"Docker",

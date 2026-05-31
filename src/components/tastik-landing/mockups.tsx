@@ -1,10 +1,19 @@
 import Image from "next/image";
+import { useLocale, useTranslations } from "next-intl";
 
-function ScreenshotMockup({ src, alt }: { src: string; alt: string }) {
+// Screenshots are localized: en visitors get /tastik/en/*, pt visitors /tastik/pt/*.
+// Only "en" and "pt" image folders exist, so anything else falls back to "en".
+function useScreenshotDir() {
+	const locale = useLocale();
+	return locale === "pt" ? "pt" : "en";
+}
+
+function ScreenshotMockup({ name, alt }: { name: string; alt: string }) {
+	const dir = useScreenshotDir();
 	return (
 		<div className="relative h-full w-full">
 			<Image
-				src={src}
+				src={`/tastik/${dir}/${name}.png`}
 				alt={alt}
 				fill
 				sizes="(max-width: 768px) 240px, 280px"
@@ -17,58 +26,55 @@ function ScreenshotMockup({ src, alt }: { src: string; alt: string }) {
 export function GroceriesMockup() {
 	return (
 		<ScreenshotMockup
-			src="/tastik/en/stepper.png"
-			alt="Tastik stepper list for groceries"
+			name="smartadd"
+			alt="Tastik groceries list with steppers and Smart Add"
 		/>
 	);
 }
 
 export function SimpleMockup() {
-	return (
-		<ScreenshotMockup
-			src="/tastik/en/quickItems.png"
-			alt="Tastik simple checklist"
-		/>
-	);
+	return <ScreenshotMockup name="lists" alt="Tastik lists overview" />;
 }
 
 export function CalculatorMockup() {
 	return (
 		<ScreenshotMockup
-			src="/tastik/en/calculator.png"
-			alt="Tastik calculator list with running total"
+			name="budget"
+			alt="Tastik budget list with a running total"
 		/>
 	);
 }
 
 export function KanbanMockup() {
-	return (
-		<ScreenshotMockup src="/tastik/en/kanban.png" alt="Tastik kanban board" />
-	);
+	return <ScreenshotMockup name="kanban" alt="Tastik kanban board" />;
 }
 
 export function MultiMockup() {
 	return (
 		<ScreenshotMockup
-			src="/tastik/en/multi.png"
+			name="reading"
 			alt="Tastik multi list with mixed item types"
 		/>
 	);
 }
 
 export function WidgetPreview() {
+	const t = useTranslations("TastikLanding");
+	const labels = t.raw("widget_preview_items") as string[];
+	const meta = [
+		{ done: true, qty: "×2" },
+		{ done: true, qty: "" },
+		{ done: false, qty: "×2" },
+		{ done: false, qty: "×3" },
+	];
+	const rows = labels.map((label, i) => ({ label, ...meta[i] }));
 	return (
 		<div className="rounded-2xl bg-card p-4 ring-1 ring-border">
 			<div className="text-[10.5px] font-semibold uppercase tracking-wider text-muted-foreground">
-				Weekly Groceries
+				{t("widget_preview_title")}
 			</div>
 			<div className="mt-3 space-y-2">
-				{[
-					{ done: true, label: "Avocados", qty: "×2" },
-					{ done: true, label: "Sourdough", qty: "" },
-					{ done: false, label: "Greek yogurt", qty: "×2" },
-					{ done: false, label: "Cold brew", qty: "×3" },
-				].map((row) => (
+				{rows.map((row) => (
 					<div key={row.label} className="flex items-center gap-2">
 						<div
 							className={
