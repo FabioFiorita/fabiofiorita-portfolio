@@ -17,7 +17,7 @@ export default function ItsMedTimePage() {
 		<main className="p-8" data-testid="itsmedtime-page">
 			<div className="flex flex-col justify-center items-center mb-8 gap-8 w-full">
 				<AppHeader
-					image="/itsmedtime.svg"
+					image="/itsmedtime.png"
 					title={t("Apps.itsMedTime.title")}
 					category={t("Apps.itsMedTime.category")}
 					platform="iOS 18+"
