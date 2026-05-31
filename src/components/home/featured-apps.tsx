@@ -9,7 +9,7 @@ export function FeaturedApps() {
 			key: "itsMedTime",
 			detailsUrl: "/itsmedtime",
 			appStoreUrl: "https://apps.apple.com/gb/app/itsmedtime/id1580757092",
-			image: "/itsmedtime.svg",
+			image: "/itsmedtime.png",
 		},
 		{
 			key: "tastik",
